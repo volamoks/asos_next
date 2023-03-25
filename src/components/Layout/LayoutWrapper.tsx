@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
-import Layout from './Layout';
+import Footer from '../Footer';
+import Header from '../Header';
 
 interface ILayoutWrapper {
     children: React.ReactElement;
@@ -9,9 +10,10 @@ interface ILayoutWrapper {
 const LayoutWrapper: FC<ILayoutWrapper> = ({ children }) => {
     return (
         <>
-            <Layout />
+            <Header />
 
             {children}
+            <Footer />
         </>
     );
 };
