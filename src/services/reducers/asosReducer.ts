@@ -37,6 +37,20 @@ export const asosSlice = createSlice({
                 ? (state.filters = state.filters.filter(filter => filter !== action.payload))
                 : state.filters.push(action.payload);
         },
+        changeSizeAndQuantity: (
+            state,
+            action: PayloadAction<{
+                id: number;
+                size?: string | undefined;
+                quantity?: number | undefined;
+            }>,
+        ) => {
+            const index = state.inBag.findIndex(item => item.id === action.payload.id);
+            if (index >= 0) {
+                state.inBag[index].size = action.payload?.size;
+                state.inBag[index].quantity = action.payload?.quantity;
+            }
+        },
     },
 });
 

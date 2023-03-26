@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
-import Image from 'next/image';
-import { AiOutlineClose, AiOutlineHeart } from 'react-icons/ai';
+
 import { IItemIncart } from '../../../../UI/AddToCartButton';
 import RemoveButton from '../../../../UI/RemoveButton';
 import SizeAndQty from './SizeAndQty';
@@ -14,7 +13,10 @@ interface IItemsInCartProps {
 
 const ItemsInCart: FC<IItemsInCartProps> = ({ data, total }) => {
     const itemsInCart = data.map(item => (
-        <div className="flex bg-white mt-5 pr-10 relative">
+        <div
+            key={item.id}
+            className="flex bg-white mt-5 pr-10 relative"
+        >
             <RemoveButton item={item} />
 
             {data.length > 0 && (
@@ -28,9 +30,9 @@ const ItemsInCart: FC<IItemsInCartProps> = ({ data, total }) => {
             )}
             <div className="flex flex-col bg-white mt-5 text-gray-500 my-2">
                 <Price item={item} />
-                <p className="text-lg mb-2">{item.name}</p>
+                <h2 className="text-lg mb-2">{item?.name}</h2>
                 <SizeAndQty item={item} />
-                <SaveForLater />
+                <SaveForLater item={item} />
             </div>
         </div>
     ));

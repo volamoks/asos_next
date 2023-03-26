@@ -21,7 +21,7 @@ const Description: FC<IItemPageProps> = ({ item }) => {
         </div>
     );
     return (
-        <div className="flex w-1/4 m-10">
+        <div className="flex w-1/4 m-10 ">
             <div className="flex flex-col ">
                 <Price item={item} />
 

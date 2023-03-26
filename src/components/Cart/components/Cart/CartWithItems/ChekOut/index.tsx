@@ -6,7 +6,6 @@ interface ICheckOutProps {
 const CheckOut: FC<ICheckOutProps> = ({ total }) => {
     const deliveOptions = (
         <div className="flex justify-between border-b-2 my-5 w-5/6 mx-auto">
-            {' '}
             <select>
                 <option>Standart delivery</option>
                 <option>Express delivery</option>

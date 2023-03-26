@@ -22,10 +22,10 @@ const MainCardComp: FC<IMainCardProps> = ({
     const element = (
         <button
             key={item.id}
-            onClick={() => router.push('/items/' + item.id)}
+            onClick={() => router.push('/item/' + item.id)}
         >
             <img
-                className="w-full object-fill"
+                className="min-w-[300px] min-h-[400px] object-fill"
                 src={'http://' + item.imageUrl}
                 alt="alt2"
                 width={width}
@@ -35,7 +35,7 @@ const MainCardComp: FC<IMainCardProps> = ({
             {title}
         </button>
     );
-    return <>{element}</>;
+    return <div className="min-w-[300px] min-h-[400px]">{element}</div>;
 };
 
 export default MainCardComp;

@@ -1,11 +1,12 @@
 import { useActions } from '@/hooks/combineActions';
 import { useAppSelector } from '@/hooks/typedHooks';
 import { IItem } from '@/interfaces/asosInterfaces/item';
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
+import { setToLocalStorage } from '../Cart/utilities/localStorage';
 
 export interface IItemIncart extends IItem {
     size: string | undefined;
-    quantity: number;
+    quantity: number | undefined;
 }
 
 interface IAddToCartButtonProps {
@@ -16,6 +17,10 @@ const AddToCartButton: FC<IAddToCartButtonProps> = ({ item }) => {
     const { addToBag } = useActions();
 
     const { inBag } = useAppSelector(state => state.asos);
+
+    useEffect(() => {
+        setToLocalStorage('inCart', inBag);
+    }, [inBag]);
 
     const handleAddToBag = () => {
         addToBag(item);

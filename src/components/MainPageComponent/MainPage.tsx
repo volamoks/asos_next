@@ -21,12 +21,12 @@ const MainListItems = () => {
     const selectedCategory =
         categoryData?.brands[storeIndex].children[catIndex].link.categoryId?.toString();
 
-    const { data: selectedCategoryData } = useGetItemsQuery(selectedCategory);
+    const { data: selectedCategoryData, isLoading } = useGetItemsQuery(selectedCategory);
 
-    if (!selectedCategoryData) return <div />;
+    if (!selectedCategoryData) return <div className=" max-w-screen-xl min-h-screen " />;
 
     return (
-        <div className=" min-h-screen max-w-screen-xl mx-auto relative">
+        <div className=" max-w-screen-xl min-h-[calc(100vh-400px-50px)] mx-auto relative">
             <div className="flex flex-col">
                 <MainImage storeIndex={storeIndex} />
                 <SecondaryImg data={selectedCategoryData} />

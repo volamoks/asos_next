@@ -1,6 +1,6 @@
 import { IItemIncart } from '@/components/UI/AddToCartButton';
 
-export interface ISizeAndQtyProps {
+export interface IItemsInCartProps {
     item: IItemIncart;
 }
 

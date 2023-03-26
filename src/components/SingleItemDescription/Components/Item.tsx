@@ -12,10 +12,13 @@ const Item: FC = () => {
     const { id } = router.query;
     const { data: singleItem, isLoading } = useGetItemQuery(id);
 
-    if (!singleItem) return <div />;
+    if (isLoading) return <Spinner />;
+
+    if (!singleItem)
+        return <div className="flex flex-row mx-auto min-h-[calc(100vh-400px-50px)]" />;
 
     return (
-        <div className="flex flex-row mx-auto h-[calc(100vh-400px-50px)]">
+        <div className="flex flex-row mx-auto min-h-[calc(100vh-400px-50px)]">
             {isLoading && <Spinner />}
             <div className="flex mt-10 justify-center max-w-screen-xl mx-auto">
                 <ItemPicComponent data={singleItem.media} />
