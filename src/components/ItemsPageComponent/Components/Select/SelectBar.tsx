@@ -5,6 +5,7 @@ import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import SelectComponent from '../UI/SelectComponent';
 import FilterButtons from '../UI/FilterButtons';
+import { nanoid } from '@reduxjs/toolkit';
 
 interface ISelectBarProps {
     data: Facet[];
@@ -29,11 +30,13 @@ const SelectBar: FC<ISelectBarProps> = ({ data }) => {
             ))}
             <div className="flex ">
                 {filters.map((item, i) => (
-                    <FilterButtons
-                        clearFilter={setFilter}
-                        filter={filters}
-                        i={i}
-                    />
+                    <div key={nanoid()}>
+                        <FilterButtons
+                            clearFilter={setFilter}
+                            filter={filters}
+                            i={i}
+                        />
+                    </div>
                 ))}
             </div>
         </>

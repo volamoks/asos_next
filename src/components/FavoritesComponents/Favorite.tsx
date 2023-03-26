@@ -12,7 +12,9 @@ const Favorite = () => {
             )}
             <div className="grid max-w-screen-xl grid-cols-4 justify-between gap-5 mt-10 self-center mx-auto mb-10">
                 {inFav.map((item, i) => (
-                    <ItemComponent item={item} />
+                    <div key={item.id}>
+                        <ItemComponent item={item} />
+                    </div>
                 ))}
             </div>
         </div>
