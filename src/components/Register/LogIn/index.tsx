@@ -1,8 +1,13 @@
+import { useCreateUserMutation, useGetUsersQuery } from '@/services/api/authApi';
 import React from 'react';
 import LoginBtns from '../SignUp/Ui/LoginButtons';
 import LoginInput from './LoginInput';
 
 const Login = () => {
+    const { data } = useGetUsersQuery('123');
+
+    console.log(data);
+
     const handleSubmint = () => {};
     const element = (
         <div className="w-screen h-screen bg-gray-200 flex justify-center pt-[100px]">
@@ -12,13 +17,6 @@ const Login = () => {
                     Sign in with Email
                 </h2>
                 <LoginInput />
-                <div className="self-center my-6 flex justify-around">{/* <DateOfBirth /> */}</div>
-                <button
-                    onClick={handleSubmint}
-                    className="bg-gray-500 w-[200px] self-center uppercase text-white font-bold py-2"
-                >
-                    sign in
-                </button>
             </div>
         </div>
     );

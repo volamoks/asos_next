@@ -1,4 +1,5 @@
 import { asosSlice } from '@/services/reducers/asosReducer';
+import { FC } from 'react';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 

@@ -4,37 +4,50 @@ import { FC, useState } from 'react';
 import LoginBtns from './Ui/LoginButtons';
 // import DateOfBirth from './SignUp/dateOfBirth';
 import Input from './Input';
+import { nanoid } from '@reduxjs/toolkit';
 
 const Register: FC = () => {
     const [user, setUser] = useState({
-        user: { email: '', firstName: '', lastName: '', password: '' },
+        id: nanoid(),
+        email: '',
+        firstName: '',
+        lastName: '',
+        password: '',
     });
 
     const router = useRouter();
-    console.log(router);
 
     const handleInput = (e: React.ChangeEvent<HTMLInputElement>, name: string) => {
         switch (name) {
             case 'EMAIL ADDRESS':
-                setUser({ user: { ...user.user, email: e.target.value } });
+                setUser({ ...user, email: e.target.value });
                 break;
             case 'FIRST NAME':
-                setUser({ user: { ...user.user, firstName: e.target.value } });
+                setUser({ ...user, firstName: e.target.value });
                 break;
             case 'LAST NAME':
-                setUser({ user: { ...user.user, lastName: e.target.value } });
+                setUser({ ...user, lastName: e.target.value });
                 break;
             case 'PASSWORD':
-                setUser({ user: { ...user.user, password: e.target.value } });
+                setUser({ ...user, password: e.target.value });
             default:
                 break;
         }
     };
 
-    const [createUser] = useCreateUserMutation();
+    const [createUser, { data }] = useCreateUserMutation();
+
+    console.log(data);
 
     const handleSubmint = () => {
-        createUser(user);
+        const userData = { ...user };
+
+        createUser(userData)
+            .unwrap()
+            .then(() => {})
+            .then(error => {
+                console.log(error);
+            });
     };
 
     const element = (

@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "conc": "concurrently \"npm run dev\" \"json-server db.json --no-cors --port 5000\""
+        "conc": "concurrently \"npm run dev\" \"json-server db.json --no-cors --routes routes.json --port 5000\""
     },
     "dependencies": {
         "@next/font": "^13.2.4",

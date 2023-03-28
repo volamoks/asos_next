@@ -17,26 +17,31 @@ const IconsComponent: FC = () => {
         router.push(link);
     };
 
-    const handleOpenAccount = () => {
+    const handleOpenAccount = (e: React.MouseEvent<HTMLButtonElement>) => {
         setInAccountModal(!isAccountModal);
     };
 
     return (
         <div className="flex w-1/5 justify-end self-center mr-4 relative">
             <div className="mr-4 cursor-pointer">
-                <IoPersonOutline
-                    onClick={handleOpenAccount}
-                    size="30px"
-                    color="white"
-                />
-                <AccountModal isAccountModal={isAccountModal} />
+                <button onClick={handleOpenAccount}>
+                    <IoPersonOutline
+                        size="30px"
+                        color="white"
+                    />
+                </button>
+                <button>
+                    <AccountModal isAccountModal={isAccountModal} />
+                </button>
             </div>
             <div className="mr-4 cursor-pointer">
-                <AiOutlineHeart
-                    onClick={() => hadleGoToPage('/favorites')}
-                    size="30px"
-                    color="white"
-                />
+                <button>
+                    <AiOutlineHeart
+                        onClick={() => hadleGoToPage('/favorites')}
+                        size="30px"
+                        color="white"
+                    />
+                </button>
             </div>
 
             <div className="mr-4 cursor-pointer">

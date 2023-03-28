@@ -1,11 +1,13 @@
 import { useGetSeacrhItemsQuery } from '@/services/api/asosFetchApi';
-import React, { FC, useState } from 'react';
+import React, { FC, useDeferredValue, useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import SearcModal from './SearchModal';
 
 const SearchInput: FC = () => {
     const [isOpen, setModalOpen] = useState(false);
     const [value, setValue] = useState('');
+
+    const deffValue = useDeferredValue(value);
 
     const { data, isLoading } = useGetSeacrhItemsQuery(value);
 
@@ -34,8 +36,7 @@ const SearchInput: FC = () => {
                 value={value}
             />
             <AiOutlineSearch
-                className="absolute top-3 right-2
-                                "
+                className="absolute top-3 right-2"
                 size="30px"
                 color="black"
             />

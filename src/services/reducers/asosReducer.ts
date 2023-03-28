@@ -3,11 +3,17 @@ import { IItem } from '@/interfaces/asosInterfaces/item';
 import { Product } from '@/interfaces/asosInterfaces/Items';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+interface ILoggedUser {
+    isAuth: boolean;
+    user: null | string;
+    id: null | string;
+}
 interface IInitialstate {
     storeGen: string;
     inBag: IItemIncart[];
     inFav: Product[] | IItem[];
     filters: string[];
+    loggedUser: ILoggedUser;
 }
 
 const initialState: IInitialstate = {
@@ -15,6 +21,7 @@ const initialState: IInitialstate = {
     inBag: [],
     inFav: [],
     filters: [],
+    loggedUser: { isAuth: false, user: null, id: null },
 };
 
 export const asosSlice = createSlice({
@@ -50,6 +57,9 @@ export const asosSlice = createSlice({
                 state.inBag[index].size = action.payload?.size;
                 state.inBag[index].quantity = action.payload?.quantity;
             }
+        },
+        setAuth: (state, action: PayloadAction<ILoggedUser>) => {
+            state.loggedUser = action.payload;
         },
     },
 });

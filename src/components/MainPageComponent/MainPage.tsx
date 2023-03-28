@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { useAppSelector } from '@/hooks/typedHooks';
-import { useGetItemsQuery } from '@/services/api/asosFetchApi';
+import { useGetcategoryQuery, useGetItemsQuery } from '@/services/api/asosFetchApi';
 import { useGetLocalCategoryQuery } from '@/services/api/localServerApi';
 
 import MainCardComp from './SecondaryImages/ImageCard';
@@ -12,7 +12,7 @@ import ColorBorderImages from './components/ColorBorderImages';
 import MainImage from './components/MainImage';
 
 const MainListItems = () => {
-    const { data: categoryData } = useGetLocalCategoryQuery('');
+    const { data: categoryData } = useGetcategoryQuery('');
     const { storeGen } = useAppSelector(state => state.asos);
 
     const storeIndex = storeGen === 'MEN' ? 0 : 2;
