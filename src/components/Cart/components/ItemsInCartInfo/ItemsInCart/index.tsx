@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import { IItemIncart } from '../../../../UI/AddToCartButton';
 import RemoveButton from '../../../../UI/RemoveButton';

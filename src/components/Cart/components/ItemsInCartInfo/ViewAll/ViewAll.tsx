@@ -1,7 +1,8 @@
-import { useRouter } from 'next/router';
-import React from 'react';
+import { FC } from 'react';
 
-const ViewAll = () => {
+import { useRouter } from 'next/router';
+
+const ViewAll: FC = () => {
     const router = useRouter();
 
     const viewAll = (

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { BsTruck } from 'react-icons/bs';
 
 const Delivery = () => {

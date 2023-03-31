@@ -1,5 +1,6 @@
-import { IItemsInCartProps } from '@/components/Cart/interfaces';
 import { FC } from 'react';
+
+import { IItemsInCartProps } from '@/components/Cart/interfaces';
 
 const Price: FC<IItemsInCartProps> = ({ item }) => {
     const element = !item?.price?.isOutletPrice ? (

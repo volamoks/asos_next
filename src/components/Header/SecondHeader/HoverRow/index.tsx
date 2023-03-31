@@ -2,7 +2,6 @@ import { FC, useState } from 'react';
 
 import ModalCards from './ModalCards';
 
-import { ICategory } from '@/interfaces/asosInterfaces/categories';
 import { useAppSelector } from '@/hooks/typedHooks';
 import { useGetcategoryQuery } from '@/services/api/asosFetchApi';
 

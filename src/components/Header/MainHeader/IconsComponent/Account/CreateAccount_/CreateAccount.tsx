@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import React from 'react';
 
 const CreateAccount = () => {
     const router = useRouter();
@@ -8,7 +7,7 @@ const CreateAccount = () => {
         router.push(url);
     };
     const create = (
-        <div className="flex bg-gray-300 justify-between p-4">
+        <>
             <div>
                 <button
                     onClick={() => hangleGoTo('/login')}
@@ -25,9 +24,9 @@ const CreateAccount = () => {
                     Sign Up
                 </button>
             </div>
-        </div>
+        </>
     );
-    return <>{create}</>;
+    return <div className="flex bg-gray-300 justify-between p-4">{create}</div>;
 };
 
 export default CreateAccount;

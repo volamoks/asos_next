@@ -13,7 +13,6 @@ interface IFilterBtnProps {
 const FilterButtons: FC<IFilterBtnProps> = ({ filter, i, clearFilter }) => {
     const handleClose = (filter: string) => {
         clearFilter(filter);
-        // console.log(e);
     };
     return (
         <div className="flex bg-gray-100 border border-gray-100 rounded-lg p-3 m-2">

@@ -6,8 +6,6 @@ interface IPriceProps {
 const PriceComponent: FC<IPriceProps> = ({ item }) => {
     const isOutletPrice = item.price.isOutletPrice;
 
-    // console.log(item.price.previous.value);
-
     const price = !isOutletPrice ? (
         <span className="text-gray-500 font-bold text-center mt-4">{item.price.current.text}</span>
     ) : (

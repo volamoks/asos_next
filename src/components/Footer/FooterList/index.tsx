@@ -1,5 +1,6 @@
-import { Footer } from '@/interfaces/asosInterfaces/categories';
 import { FC } from 'react';
+
+import { Footer } from '@/interfaces/asosInterfaces/categories';
 
 interface IFooterListProps {
     list: Footer;

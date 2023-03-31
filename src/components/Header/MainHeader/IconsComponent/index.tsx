@@ -1,8 +1,8 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 
 import { IoPerson, IoPersonOutline } from 'react-icons/io5';
 import { AiOutlineHeart, AiOutlineSearch } from 'react-icons/ai';
-import Link from 'next/link';
+
 import { BsBag, BsFillBagFill } from 'react-icons/bs';
 import { useRouter } from 'next/router';
 import { useAppSelector } from '@/hooks/typedHooks';
@@ -23,8 +23,8 @@ const IconsComponent: FC = () => {
         setInAccountModal(!isAccountModal);
     };
 
-    return (
-        <div className="flex  gap-4 justify-end relative my-auto">
+    const searchIcon = (
+        <>
             <div className=" xl:hidden ">
                 <button onClick={handleOpenAccount}>
                     <AiOutlineSearch
@@ -41,53 +41,69 @@ const IconsComponent: FC = () => {
                     />
                 </button>
             </div>
+        </>
+    );
 
-            <div className=" ">
-                <button onClick={handleOpenAccount}>
-                    {loggedUser.isAuth ? (
-                        <IoPerson
-                            size="30px"
-                            color="white"
-                        />
-                    ) : (
-                        <IoPersonOutline
-                            size="30px"
-                            color="white"
-                        />
-                    )}
-                </button>
-                <div>
-                    <AccountModal
-                        isAccountModal={isAccountModal}
-                        userData={loggedUser}
-                    />
-                </div>
-            </div>
-            <div className="">
-                <button>
-                    <AiOutlineHeart
-                        onClick={() => hadleGoToPage('/favorites')}
-                        size="30px"
-                        color="white"
-                    />
-                </button>
-            </div>
+    const bag = (
+        <div className=" ">
+            {inBag.length > 0 ? (
+                <BsFillBagFill
+                    onClick={() => hadleGoToPage('/cart')}
+                    size="30px"
+                    color="white"
+                />
+            ) : (
+                <BsBag
+                    onClick={() => hadleGoToPage('/cart')}
+                    size="30px"
+                    color="white"
+                />
+            )}
+        </div>
+    );
 
-            <div className=" ">
-                {inBag.length > 0 ? (
-                    <BsFillBagFill
-                        onClick={() => hadleGoToPage('/cart')}
+    const personIcon = (
+        <div className=" ">
+            <button onClick={handleOpenAccount}>
+                {loggedUser.isAuth ? (
+                    <IoPerson
                         size="30px"
                         color="white"
                     />
                 ) : (
-                    <BsBag
-                        onClick={() => hadleGoToPage('/cart')}
+                    <IoPersonOutline
                         size="30px"
                         color="white"
                     />
                 )}
+            </button>
+            <div>
+                <AccountModal
+                    isAccountModal={isAccountModal}
+                    userData={loggedUser}
+                />
             </div>
+        </div>
+    );
+
+    const heartIcon = (
+        <div className="">
+            <button>
+                <AiOutlineHeart
+                    onClick={() => hadleGoToPage('/favorites')}
+                    size="30px"
+                    color="white"
+                />
+            </button>
+        </div>
+    );
+
+    return (
+        <div className="flex  gap-4 justify-end relative my-auto">
+            {searchIcon}
+            {personIcon}
+            {heartIcon}
+            {bag}
         </div>
     );
 };

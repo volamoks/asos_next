@@ -6,8 +6,6 @@ import { ISearcModalProps } from '@/components/Header/interfaces';
 import { toCamelCase } from '@/components/Header/utils/toCamelCase';
 
 const SearcModal: FC<ISearcModalProps> = ({ isOpen, data, setClose }) => {
-    console.log(data);
-
     const modal = isOpen ? (
         <>
             <div className="bg-white w-full  absolute -top-6 z-10 p-6">

@@ -7,8 +7,6 @@ const SearchInput: FC = () => {
     const [isOpen, setModalOpen] = useState(false);
     const [value, setValue] = useState('');
 
-    const deffValue = useDeferredValue(value);
-
     const { data, isLoading } = useGetSeacrhItemsQuery(value);
 
     const handChahge = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,11 +33,6 @@ const SearchInput: FC = () => {
                 type="search"
                 value={value}
             />
-            {/* <AiOutlineSearch
-                className="absolute top-0 right-16 xl:top-3 xl:right-2"
-                size="30px"
-                color="black"
-            /> */}
 
             <SearcModal
                 isOpen={isOpen}

@@ -1,8 +1,10 @@
+import { FC } from 'react';
+
 import { useAppSelector } from '@/hooks/typedHooks';
-import React from 'react';
+
 import ItemComponent from '../ItemsPageComponent/Components/ItemCard/ItemComponent/ItemComponent';
 
-const Favorite = () => {
+const Favorite: FC = () => {
     const { inFav } = useAppSelector(state => state.asos);
 
     return (

@@ -1,7 +1,8 @@
+import React, {  } from 'react';
+
 import { useAppSelector } from '@/hooks/typedHooks';
+
 import NoSSR from '@/services/helpers/NoSSR';
-import React, { useEffect, useState } from 'react';
-import { getLocatStorage } from '../../utilities/localStorage';
 import CartWithItems from './CartWithItems';
 import EmptyBag from './EmptyCArt/EmptyBag';
 

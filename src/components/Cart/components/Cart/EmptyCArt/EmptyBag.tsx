@@ -1,6 +1,8 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import React from 'react';
+
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+
 import { BsBag } from 'react-icons/bs';
 
 const EmptyBag = () => {

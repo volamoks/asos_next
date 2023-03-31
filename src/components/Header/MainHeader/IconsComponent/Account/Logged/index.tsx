@@ -11,7 +11,7 @@ const Logged = ({ userData }: { userData: ILoggedUser }) => {
     };
 
     const loggedAcc = (
-        <div className="flex bg-gray-300 justify-between p-4">
+        <>
             <div className="font-bold text-xl">Hi {userData.user}</div>
             <div
                 onClick={handleLogout}
@@ -19,9 +19,9 @@ const Logged = ({ userData }: { userData: ILoggedUser }) => {
             >
                 Logout
             </div>
-        </div>
+        </>
     );
-    return <>{loggedAcc}</>;
+    return <div className="flex bg-gray-300 justify-between p-4">{loggedAcc}</div>;
 };
 
 export default Logged;

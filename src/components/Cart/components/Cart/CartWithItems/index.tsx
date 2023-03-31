@@ -7,7 +7,6 @@ import ViewAll from '../../ItemsInCartInfo/ViewAll/ViewAll';
 
 const CartWithItems: FC = () => {
     const { inBag } = useAppSelector(state => state.asos);
-
     const [item, setItem] = useState<IItemIncart[]>([]);
 
     useEffect(() => {

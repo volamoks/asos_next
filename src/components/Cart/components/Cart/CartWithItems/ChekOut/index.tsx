@@ -5,14 +5,12 @@ interface ICheckOutProps {
 }
 const CheckOut: FC<ICheckOutProps> = ({ total }) => {
     const [delivery, setDelivery] = React.useState(12);
-    const [deliveryType, setDeliveryType] = React.useState('');
 
     const handleDeliveryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const value = parseInt(e.currentTarget.value);
         setDelivery(value);
     };
 
-    console.log(deliveryType);
     const totalDelivery =
         total > 200 && delivery === 20 ? 0 : total > 100 && delivery === 12 ? 0 : delivery;
 

@@ -2,7 +2,6 @@ import { useActions } from '@/hooks/combineActions';
 import { useAppSelector } from '@/hooks/typedHooks';
 import { Facet } from '@/interfaces/asosInterfaces/Items';
 import { FC } from 'react';
-import { useSelector } from 'react-redux';
 import SelectComponent from '../UI/SelectComponent';
 import FilterButtons from '../UI/FilterButtons';
 import { nanoid } from '@reduxjs/toolkit';

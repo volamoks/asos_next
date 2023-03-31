@@ -1,11 +1,12 @@
-import { useAppSelector } from '@/hooks/typedHooks';
+import { FC } from 'react';
+
 import { ILoggedUser } from '@/services/reducers/asosReducer';
-import { FC, useEffect, useState } from 'react';
-import { AiOutlineAccountBook } from 'react-icons/ai';
-import { BsBox2 } from 'react-icons/bs';
-import { IoPerson, IoPersonOutline } from 'react-icons/io5';
+
 import CreateAccount from './CreateAccount_/CreateAccount';
 import Logged from './Logged';
+
+import { BsBox2 } from 'react-icons/bs';
+import { IoPersonOutline } from 'react-icons/io5';
 
 interface IAccountModalProps {
     isAccountModal: boolean;

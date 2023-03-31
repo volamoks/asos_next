@@ -1,15 +1,15 @@
-import React from 'react';
+import { FC, useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import SideBar from './SideBar';
 
-const Burger = () => {
-    const [isSideBar, setIsSideBar] = React.useState(false);
+const Burger: FC = () => {
+    const [isSideBar, setIsSideBar] = useState(false);
 
     const hadleOpenSideBar = () => {
         setIsSideBar(!isSideBar);
     };
     const burder = (
-        <div className="md:hidden">
+        <>
             <button onClick={hadleOpenSideBar}>
                 <GiHamburgerMenu
                     color={'white'}
@@ -25,9 +25,9 @@ const Burger = () => {
                     />
                 ) : null}
             </div>
-        </div>
+        </>
     );
-    return <>{burder}</>;
+    return <div className="md:hidden">{burder}</div>;
 };
 
 export default Burger;

@@ -1,12 +1,12 @@
+import { FC } from 'react';
+
 import { useGetcategoryQuery } from '@/services/api/asosFetchApi';
-import { useGetLocalCategoryQuery } from '@/services/api/localServerApi';
-import React from 'react';
+
 import FooterList from './FooterList';
 
-const Footer = () => {
+const Footer: FC = () => {
     const { data } = useGetcategoryQuery('');
 
-    console.log(data);
     const shipping = (
         <div className="text-gray-600 text-base font-bold mt-6 uppercase w-1/4  text-center">
             Shipping from
