@@ -24,7 +24,7 @@ const TopBrandCategories: FC<ITopBrandCategoriesProps> = ({ data, gender }) => {
                             onClick={() => hadleGoToPage(item.link.categoryId)}
                             className="cursor-pointer"
                         >
-                            {store.toLowerCase()}'s {item.content.title}
+                            {store.toLowerCase()}&apos;s {item.content.title}
                         </li>
                     ))}
             </ul>

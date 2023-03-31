@@ -10,7 +10,7 @@ const ViewAll = () => {
                 WONDERING WHERE YOUR ITEMS HAVE GONE?
             </span>
             <span className=" mt-10 text-gray-700">
-                No worries – you'll find them in your Saved Items.
+                No worries – you&apos;ll find them in your Saved Items.
             </span>
 
             <button
