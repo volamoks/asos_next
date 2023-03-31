@@ -15,7 +15,6 @@ const Burger: FC = () => {
                     color={'white'}
                     size={20}
                 />
-                ;
             </button>
             <div>
                 {isSideBar ? (

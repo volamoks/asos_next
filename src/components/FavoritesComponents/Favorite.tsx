@@ -12,7 +12,7 @@ const Favorite: FC = () => {
             {!inFav.length && (
                 <div className="mx-auto mt-[200px] text-xl">No Favorite items yet..</div>
             )}
-            <div className="grid max-w-screen-xl grid-cols-4 justify-between gap-5 mt-10 self-center mx-auto mb-10">
+            <div className="grid max-w-screen-xl min-h-screen grid-cols-2 xl:grid-cols-4 justify-between gap-5 mt-10 self-center mx-auto mb-10">
                 {inFav.map((item, i) => (
                     <div key={item.id}>
                         <ItemComponent item={item} />

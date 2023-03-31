@@ -21,6 +21,8 @@ const MainListItems = () => {
     if (isLoading) return <Spinner />;
     if (!categoryData) return <div className=" max-w-screen-xl min-h-screen " />;
 
+    console.log(categoryData);
+
     return (
         <div className=" sm:width-full xl:max-w-screen-xl xl:min-h-[calc(100vh-400px-50px)] mx-auto relative ">
             <div className="flex flex-col">

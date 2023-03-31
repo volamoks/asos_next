@@ -9,7 +9,7 @@ const EmptyBag = () => {
     const router = useRouter();
     return (
         <div className=" bg-gray-200">
-            <div className="flex flex-col max-w-screen-lg mx-auto h-[calc(100vh-400px-50px)]  justify-center ">
+            <div className="flex flex-col max-w-screen-lg mx-auto xl:h-[calc(100vh-400px-50px)]  h-screen justify-center ">
                 <BsBag
                     size={30}
                     className="self-center m-4"
@@ -23,7 +23,7 @@ const EmptyBag = () => {
                 </span>
                 <button
                     onClick={() => router.push('/favorites')}
-                    className="bg-green-700 uppercase p-3 text-white font-bold w-1/5 self-center mt-6"
+                    className="bg-green-700 uppercase p-3 text-white font-bold w-2/5 xl:w-1/5 self-center mt-6"
                 >
                     view saved items
                 </button>

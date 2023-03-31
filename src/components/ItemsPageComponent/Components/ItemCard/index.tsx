@@ -26,7 +26,7 @@ const ItemCard: FC<ItemCardProps> = ({ data, total }) => {
             </div>
         </>
     );
-    return <div className="flex flex-col xl:flex-cols-4">{itemsCard}</div>;
+    return <div className="flex flex-col xl:flex-cols-4 min-h-screen">{itemsCard}</div>;
 };
 
 export default ItemCard;

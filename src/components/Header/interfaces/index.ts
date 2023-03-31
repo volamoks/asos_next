@@ -7,7 +7,7 @@ export interface IModalBlockProps {
 }
 
 export interface ISearcModalProps {
-    isOpen: boolean;
+    isModalOpen: boolean;
     data: ISearch | undefined;
     setClose: () => void;
 }

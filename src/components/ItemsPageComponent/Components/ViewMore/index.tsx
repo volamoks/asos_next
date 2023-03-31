@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
 
-import { IItems } from '@/interfaces/asosInterfaces/Items';
-
 interface IViewMoreProps {
     total: number;
 }

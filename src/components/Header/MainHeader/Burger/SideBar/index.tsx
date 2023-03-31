@@ -8,6 +8,8 @@ import ThreeCards from '@/components/Header/SecondHeader/HoverRow/ModalCards/Mod
 
 import { AiOutlineClose } from 'react-icons/ai';
 import { IoArrowBack } from 'react-icons/io5';
+import SelectGenderComponent from '../../SelectGender';
+import { useAppSelector } from '@/hooks/typedHooks';
 
 interface ISideBarProps {
     hadleOpenSideBar: () => void;
@@ -17,9 +19,11 @@ const SideBar: FC<ISideBarProps> = ({ hadleOpenSideBar, isSideBar }) => {
     const router = useRouter();
     const { data } = useGetcategoryQuery('');
 
+    const { storeGen } = useAppSelector(state => state.asos);
     const [categoryIndex, setCategoryIndex] = useState(0);
     const [secodSideBar, setSecodSideBar] = useState(false);
 
+    const index = storeGen === 'MEN' ? 0 : 1;
     const handleSetIndex = (id: number | undefined) => {
         if (id) setCategoryIndex(id);
         setSecodSideBar(true);
@@ -34,7 +38,7 @@ const SideBar: FC<ISideBarProps> = ({ hadleOpenSideBar, isSideBar }) => {
         hadleOpenSideBar();
     };
 
-    const sideElems = data?.navigation[0].children.slice(0, 5).map(item => (
+    const sideElems = data?.navigation[index].children.slice(0, 5).map(item => (
         <div
             className="mb-4"
             key={item.id}
@@ -86,9 +90,12 @@ const SideBar: FC<ISideBarProps> = ({ hadleOpenSideBar, isSideBar }) => {
             // onClick={hadleOpenSideBar}
             className={`fixed inset-0 bg-black/70 z-50 ${isSideBar ? '' : 'pointer-events-none'}`}
         >
-            <div className="flex-col l bg-white px-4 z-50 absolute  transition-all  translate-x-0 w-auto  min-w-[383px]">
+            <div className="sidebar flex-col  bg-white px-4 z-50 absolute transition-all translate-x-0 w-auto min-w-[383px] h-screen overflow-y-auto">
                 {buttons}
-                <div className="mt-12"> {!secodSideBar ? sideElems : circleList}</div>
+                <SelectGenderComponent />
+                <div className="h-auto overflow-y-auto">
+                    {!secodSideBar ? sideElems : circleList}
+                </div>
             </div>
         </div>
     );

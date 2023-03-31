@@ -19,20 +19,22 @@ const ItemsList: FC = () => {
     if (!data) return <div />;
 
     const itemsList = (
-        <>
-            <h2 className="text-black text-2xl text-center font-bold my-10">{data.categoryName}</h2>
+        <div className="min-h-screen">
+            <h2 className="text-black text-2xl text-center font-bold my-10 ">
+                {data.categoryName}
+            </h2>
             <SelectBar data={data.facets} />
             <ItemCard
                 data={data}
                 total={data.itemCount}
             />
             <ViewMore total={data.itemCount} />
-        </>
+        </div>
     );
 
     return (
         <>
-            <div className="flex justify-center flex-col">{itemsList}</div>
+            <div className="flex justify-center flex-col  relative">{itemsList}</div>
         </>
     );
 };

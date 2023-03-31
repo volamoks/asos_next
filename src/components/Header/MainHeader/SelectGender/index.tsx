@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import { useRouter } from 'next/router';
 
@@ -7,6 +7,7 @@ import { useAppSelector } from '@/hooks/typedHooks';
 
 const SelectGenderComponent: FC = () => {
     const { storeGen: gender } = useAppSelector(state => state.asos);
+    const [activeStore, setActiveStore] = useState(gender);
     const { setstoreGen } = useActions();
 
     const router = useRouter();
@@ -16,16 +17,20 @@ const SelectGenderComponent: FC = () => {
         router.push('/');
     };
 
+    useEffect(() => {
+        setActiveStore(gender);
+    }, [gender]);
+
     const storeGender = ['WOMEN', 'MEN'];
 
     const genderBtns = (
-        <div className="flex w-full ">
+        <div className="flex justify-between ">
             {storeGender.map(gend => (
                 <button
                     key={gend}
                     onClick={hadleClick}
-                    className={`hidden xl:flex  my-auto p-4 mx-2 text-xl min-w-[100px] font-bold text-white cursor-pointer active:bg-white ${
-                        gender === gend ? 'bg-[#666] ' : ''
+                    className={` flex  my-auto p-4 mx-2 min-w-[150px] justify-center border-b-2 text-xl xl:min-w-[100px] xl:font-bold xl:text-white  xl:active:bg-white ${
+                        activeStore === gend ? ' border-b-4 border-gray-500 xl:bg-[#666]  ' : ''
                     }`}
                 >
                     {gend}
@@ -33,7 +38,7 @@ const SelectGenderComponent: FC = () => {
             ))}
         </div>
     );
-    return <div className="w-2/3">{genderBtns}</div>;
+    return <div className="w-full xl:w-2/3">{genderBtns}</div>;
 };
 
 export const getServerSideProps = async () => {

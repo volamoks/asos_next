@@ -8,12 +8,14 @@ import HeartButton from '../../../../UI/HeartButton';
 import PriceComponent from '../../UI/PriceComponent';
 import DiscountLabel from '../../UI/DiscountLabel';
 import SellingFastLabel from '../../UI/SelingFastLabel';
+import { IItem } from '@/interfaces/asosInterfaces/item';
 
 interface IitemsProps {
-    item: Product;
+    item: Product | IItem;
 }
 
 const ItemComponent: FC<IitemsProps> = ({ item }) => {
+    console.log(item);
     const getSeconPic = (link: string) => link.split('-').slice(0, -2).join('-') + '-2';
     const router = useRouter();
 
@@ -22,9 +24,22 @@ const ItemComponent: FC<IitemsProps> = ({ item }) => {
         router.push('/item/' + link);
     };
 
-    !item && <div />;
+    if (!item) return <div>No favorites yet...</div>;
 
-    const images = (
+    // let images;
+    const imagesIItem = 'media' in item && item.media && (
+        <>
+            <Image
+                className="object-contain "
+                src={'https://' + item.media.images[0].url}
+                alt="mainImage"
+                width={300}
+                height={300}
+            />
+        </>
+    );
+
+    const imagesProduct = 'imageUrl' in item && item.imageUrl && (
         <>
             <Image
                 className="object-contain "
@@ -39,9 +54,10 @@ const ItemComponent: FC<IitemsProps> = ({ item }) => {
                 alt="secondImage"
                 width={300}
                 height={300}
-            ></Image>
+            />
         </>
     );
+
     return (
         <div
             key={item.id}
@@ -52,11 +68,12 @@ const ItemComponent: FC<IitemsProps> = ({ item }) => {
                 key={item.id}
                 className="flex flex-col relative"
             >
-                {images}
+                {imagesIItem}
+                {imagesProduct}
                 <div className=" absolute  top-[20px]">
                     <DiscountLabel item={item} />
                 </div>
-                <div className=" absolute right-2  top-[240px] xl:top-[340px]">
+                <div className=" absolute right-2  top-[210px] xl:top-[340px]">
                     <HeartButton item={item} />
                 </div>
                 <div className=" absolute right-0 top-[200px] xl:top-[300px]">

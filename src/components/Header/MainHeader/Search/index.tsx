@@ -1,48 +1,41 @@
-import { useGetSeacrhItemsQuery } from '@/services/api/asosFetchApi';
-import React, { FC, useDeferredValue, useState } from 'react';
-import { AiOutlineSearch } from 'react-icons/ai';
-import SearcModal from './SearchModal';
+import React, { FC } from 'react';
 
-const SearchInput: FC = () => {
-    const [isOpen, setModalOpen] = useState(false);
-    const [value, setValue] = useState('');
+export interface IsearchInput {
+    setOpen: () => void;
+    value: string;
+    isModalOpen: boolean;
+    setClose: () => void;
 
-    const { data, isLoading } = useGetSeacrhItemsQuery(value);
+    handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
-    const handChahge = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValue(e.currentTarget.value);
-        setOpen();
-    };
-
-    const setOpen = () => {
-        setModalOpen(true);
-    };
-
-    const setClose = () => {
-        setModalOpen(false);
-        setValue('');
-    };
-
-    const form = (
-        <form action="input ">
-            <input
-                onClick={setOpen}
-                onChange={handChahge}
-                placeholder="   Search for items"
-                className="  xl:flex rounded-3xl xl:w-max-screen-xl w-full my-1 xl:h-[45px] relative border-2 pl-4"
-                type="search"
-                value={value}
-            />
-
-            <SearcModal
-                isOpen={isOpen}
-                data={data}
-                setClose={setClose}
-            />
-        </form>
+const SearchInput: FC<IsearchInput> = ({ setOpen, value, handleChange, isModalOpen, setClose }) => {
+    const form = isModalOpen && (
+        <>
+            <form action="input ">
+                <input
+                    onClick={setOpen}
+                    onChange={handleChange}
+                    placeholder="   Search for items"
+                    className="  flex xl:flex rounded-3xl xl:w-max-screen-xl  w-full my-1 h-[45px] relative xl:border-2 pl-4"
+                    type="search"
+                    value={value}
+                />
+            </form>
+            <button
+                className="absolute top-3 right-4"
+                onClick={setClose}
+            >
+                Close
+            </button>
+        </>
     );
 
-    return <div className=" hidden w-full xl:flex flex-col">{form}</div>;
+    return (
+        <div className=" absolute top-10 left-0 xl:relative w-full xl:flex flex-col z-30">
+            {form}
+        </div>
+    );
 };
 
 export default SearchInput;

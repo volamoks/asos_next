@@ -4,32 +4,41 @@ import { nanoid } from '@reduxjs/toolkit';
 
 import { ISearcModalProps } from '@/components/Header/interfaces';
 import { toCamelCase } from '@/components/Header/utils/toCamelCase';
+import { useRouter } from 'next/router';
 
-const SearcModal: FC<ISearcModalProps> = ({ isOpen, data, setClose }) => {
-    const modal = isOpen ? (
-        <>
-            <div className="bg-white w-full  absolute -top-6 z-10 p-6">
+const SearcModal: FC<ISearcModalProps> = ({ isModalOpen, data, setClose }) => {
+    const router = useRouter();
+    const hadleGoToPage = () => {
+        router.push(`/items/`);
+    };
+
+    const modal = isModalOpen ? (
+        <div className="z-20 relative ">
+            <div className="bg-gray-200 -top-16 xl:bg-white w-full  absolute xl:-top-6 z-10 p-4 pt-24 xl:p-6 h-screen">
                 <div className="">
                     {data?.suggestionGroups[0].suggestions.map(item => (
-                        <div key={nanoid()}>
-                            <div className="flex flex-row justify-between py-2">
-                                <div>{toCamelCase(item.searchTerm)}</div>
-                                <div>{item.numberOfResults}</div>
-                            </div>
-                        </div>
+                        <ul key={nanoid()}>
+                            <li
+                                onClick={() => hadleGoToPage()}
+                                className="flex flex-row justify-between py-2 xl:py-2"
+                            >
+                                <span>{toCamelCase(item.searchTerm)}</span>
+                                <span>{item.numberOfResults}</span>
+                            </li>
+                        </ul>
                     ))}
                 </div>
             </div>
             <div
                 onClick={setClose}
-                className="bg-black/50 w-screen h-screen absolute -left-[600px]"
+                className="xl:bg-black/50 w-screen h-screen absolute -left-[600px]"
             ></div>
-        </>
+        </div>
     ) : (
         <div />
     );
 
-    return <div className="z-20 relative ">{modal}</div>;
+    return <>{modal}</>;
 };
 
 export default SearcModal;

@@ -8,7 +8,9 @@ import { useRouter } from 'next/router';
 import { useAppSelector } from '@/hooks/typedHooks';
 import AccountModal from './Account';
 
-const IconsComponent: FC = () => {
+import { IsearchInput } from '../Search';
+
+const IconsComponent: FC<IsearchInput> = ({ setOpen, value, setClose, handleChange }) => {
     const router = useRouter();
     const { loggedUser } = useAppSelector(state => state.asos);
     const { inBag } = useAppSelector(state => state.asos);
@@ -26,7 +28,7 @@ const IconsComponent: FC = () => {
     const searchIcon = (
         <>
             <div className=" xl:hidden ">
-                <button onClick={handleOpenAccount}>
+                <button onClick={setOpen}>
                     <AiOutlineSearch
                         size="30px"
                         color="white"
