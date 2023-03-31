@@ -2,9 +2,8 @@ import { useAppSelector } from '@/hooks/typedHooks';
 import { FC, useEffect, useState } from 'react';
 import CheckOut from './ChekOut';
 import CartItems from '../../ItemsInCartInfo';
-import { getLocatStorage } from '@/components/Cart/utilities/localStorage';
-import { useGetItemQuery } from '@/services/api/asosFetchApi';
 import { IItemIncart } from '@/components/UI/AddToCartButton';
+import ViewAll from '../../ItemsInCartInfo/ViewAll/ViewAll';
 
 const CartWithItems: FC = () => {
     const { inBag } = useAppSelector(state => state.asos);
@@ -12,9 +11,7 @@ const CartWithItems: FC = () => {
     const [item, setItem] = useState<IItemIncart[]>([]);
 
     useEffect(() => {
-        const selectedItem = getLocatStorage('inCart');
-
-        setItem(selectedItem);
+        setItem(inBag);
     }, [inBag]);
 
     const total = item.reduce(
@@ -27,12 +24,16 @@ const CartWithItems: FC = () => {
 
     const cart = (
         <div className=" bg-gray-200">
-            <div className="flex max-w-screen-lg mx-auto min-h-screen ">
-                <CartItems
-                    items={item}
-                    total={total}
-                />
-                <CheckOut total={total} />
+            <div className="flex flex-col xl:flex-cols-2 max-w-screen-lg mx-auto min-h-screen ">
+                <div className="xl:flex">
+                    <CartItems
+                        items={item}
+                        total={total}
+                    />
+                    <CheckOut total={total} />
+                </div>
+
+                <ViewAll />
             </div>
         </div>
     );

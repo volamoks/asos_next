@@ -6,7 +6,7 @@ const Logo = () => {
     return (
         <Link
             href={'/'}
-            className="flex w-1/3"
+            className=""
         >
             <Image
                 className="w-20 h-auto object-contain mr-20 fill-white "

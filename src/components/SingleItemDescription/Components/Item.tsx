@@ -14,13 +14,12 @@ const Item: FC = () => {
 
     if (isLoading) return <Spinner />;
 
-    if (!singleItem)
-        return <div className="flex flex-row mx-auto min-h-[calc(100vh-400px-50px)]" />;
+    if (!singleItem) return <div />;
 
     return (
-        <div className="flex flex-row mx-auto min-h-[calc(100vh-400px-50px)]">
+        <div className=" min-h-[calc(100vh-400px-50px)]">
             {isLoading && <Spinner />}
-            <div className="flex mt-10 justify-center max-w-screen-xl mx-auto">
+            <div className="flex flex-col  xl:flex-row xl:mt-10 justify-center max-w-screen-xl mx-auto">
                 <ItemPicComponent data={singleItem.media} />
                 <Description item={singleItem} />
             </div>

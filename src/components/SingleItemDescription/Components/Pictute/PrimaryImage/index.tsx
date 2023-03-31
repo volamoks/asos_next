@@ -37,7 +37,7 @@ const PrimaryImg: FC<IPrimaryImgProps> = ({ images, bigImage, setBigImage }) => 
     );
 
     return (
-        <div className="flex justify-end ml-8 relative transition transition-transform:translate-x-12  duration-300">
+        <div className="flex justify-end xl:ml-8 relative transition transition-transform:translate-x-12  duration-300">
             <button className="absolute top-[300px] right-[20px]">
                 <MdArrowForwardIos
                     onClick={() => handleChange(1)}

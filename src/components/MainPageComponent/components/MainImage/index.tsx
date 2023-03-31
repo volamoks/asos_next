@@ -10,13 +10,13 @@ const MainImage: FC<IMainImageProps> = ({ storeIndex }) => {
     ];
 
     const img = (
-        <div className="flex mt-5 ml-3">
+        <div className="flex mt-5 mx-auto relative">
             <img
                 src={MainImg[storeIndex]}
                 alt="mainPicture"
             />
             <BigImgButtons />
-            <div className="absolute top-[450px] left-[498px]"></div>
+            <div className="absolute top-[450px] left-[50px]"></div>
         </div>
     );
     return <div>{img}</div>;

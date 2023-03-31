@@ -1,10 +1,10 @@
+import React, { FC, useState } from 'react';
+
+import { nanoid } from '@reduxjs/toolkit';
+
 import { IItemsInCartProps } from '@/components/Cart/interfaces';
-import { IItemIncart } from '@/components/UI/AddToCartButton';
 import { useActions } from '@/hooks/combineActions';
 import { useAppSelector } from '@/hooks/typedHooks';
-import { actions } from '@/services/reducers/asosReducer';
-import { nanoid } from '@reduxjs/toolkit';
-import React, { FC, useState } from 'react';
 
 const SizeAndQty: FC<IItemsInCartProps> = ({ item }) => {
     const quantArr = [1, 2, 3, 4, 5];
@@ -24,11 +24,16 @@ const SizeAndQty: FC<IItemsInCartProps> = ({ item }) => {
 
     const { changeSizeAndQuantity } = useActions();
 
-    const element = (
+    const colorElem = (
+        <div className="w-1/4">
+            <span>{item.variants[0]?.colour}</span>
+        </div>
+    );
+
+    const sizeElem = (
         <>
-            <p>{item.variants[0]?.colour}</p>
-            <div className="w-1/3">
-                SIZE
+            <div className="flex w-2/4 ">
+                <span className="hidden xl:flex">SIZE</span>
                 <select
                     value={size}
                     onChange={e => handleChangeSize(e, item.id)}
@@ -46,26 +51,36 @@ const SizeAndQty: FC<IItemsInCartProps> = ({ item }) => {
                     )}
                 </select>
             </div>
-            <div className="w-1/3">
-                QTY
-                <select
-                    value={quantity}
-                    onChange={e => handleChangeQty(e, item.id)}
-                >
-                    QTY
-                    {quantArr.map(quant => (
-                        <option
-                            key={nanoid()}
-                            value={quant}
-                        >
-                            {quant}
-                        </option>
-                    ))}
-                </select>
-            </div>
         </>
     );
-    return <div className="flex justify-between">{element}</div>;
+
+    const qtyElem = (
+        <div className="flex w-1/4">
+            <span className="">QTY</span>
+            <select
+                value={quantity}
+                onChange={e => handleChangeQty(e, item.id)}
+            >
+                QTY
+                {quantArr.map(quant => (
+                    <option
+                        key={nanoid()}
+                        value={quant}
+                    >
+                        {quant}
+                    </option>
+                ))}
+            </select>
+        </div>
+    );
+
+    return (
+        <div className="flex w-full justify-between">
+            {colorElem}
+            {sizeElem}
+            {qtyElem}
+        </div>
+    );
 };
 
 export default SizeAndQty;

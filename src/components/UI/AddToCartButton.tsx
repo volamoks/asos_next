@@ -1,7 +1,8 @@
 import { useActions } from '@/hooks/combineActions';
 import { useAppSelector } from '@/hooks/typedHooks';
 import { IItem } from '@/interfaces/asosInterfaces/item';
-import useSetItems, { TYPEs_OF_SET_ITEMS } from '@/services/helpers/setItemsOfUser';
+
+import { TYPES_REDUCER_ACTIONS } from '@/services/reducers/asosReducer';
 import React, { FC, useEffect } from 'react';
 import { setToLocalStorage } from '../Cart/utilities/localStorage';
 
@@ -16,15 +17,14 @@ interface IAddToCartButtonProps {
 
 const AddToCartButton: FC<IAddToCartButtonProps> = ({ item }) => {
     const { addToBag } = useActions();
-    const setItem = useSetItems();
     const { inBag } = useAppSelector(state => state.asos);
 
     useEffect(() => {
-        setToLocalStorage(TYPEs_OF_SET_ITEMS.IN_CART, inBag);
+        setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_CART, inBag);
     }, [inBag]);
 
     const handleAddToBag = () => {
-        setItem(item, TYPEs_OF_SET_ITEMS.IN_CART);
+        addToBag(item);
     };
 
     const isInBag = inBag.findIndex(product => product.id === item.id) >= 0 ? true : false;

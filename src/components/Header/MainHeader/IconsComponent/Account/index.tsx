@@ -1,21 +1,21 @@
 import { useAppSelector } from '@/hooks/typedHooks';
-import { FC } from 'react';
+import { ILoggedUser } from '@/services/reducers/asosReducer';
+import { FC, useEffect, useState } from 'react';
 import { AiOutlineAccountBook } from 'react-icons/ai';
 import { BsBox2 } from 'react-icons/bs';
-import { IoPersonOutline } from 'react-icons/io5';
+import { IoPerson, IoPersonOutline } from 'react-icons/io5';
 import CreateAccount from './CreateAccount_/CreateAccount';
 import Logged from './Logged';
 
 interface IAccountModalProps {
     isAccountModal: boolean;
+    userData: ILoggedUser;
 }
-const AccountModal: FC<IAccountModalProps> = ({ isAccountModal }) => {
-    const { loggedUser } = useAppSelector(state => state.asos);
-
-    const element = loggedUser.isAuth ? <Logged name={loggedUser.user} /> : <CreateAccount />;
+const AccountModal: FC<IAccountModalProps> = ({ isAccountModal, userData }) => {
+    const element = userData?.isAuth ? <Logged userData={userData} /> : <CreateAccount />;
 
     const modal = isAccountModal && (
-        <div className=" absolute flex flex-col  bg-gray-200 w-[320px] min-h-[150px] z-30 -left-[100px] top-[46px]">
+        <div className=" absolute flex flex-col  bg-gray-200 xl:w-[320px] xl:min-h-[150px] z-30 -left-[100px] top-[46px]">
             {element}
             <div className="flex items-center px-4 text-gray-700 hover:text-blue-500">
                 <IoPersonOutline size={24} />

@@ -6,7 +6,7 @@ const ViewAll = () => {
 
     const viewAll = (
         <>
-            <span className="uppercase font-bold text-lg text-gray-700">
+            <span className="uppercase font-bold text-lg text-gray-700 ">
                 WONDERING WHERE YOUR ITEMS HAVE GONE?
             </span>
             <span className=" mt-10 text-gray-700">
@@ -15,14 +15,14 @@ const ViewAll = () => {
 
             <button
                 onClick={() => router.push('/favorites')}
-                className="mt-7 uppercase font-bold self-start px-8 py-4 border-2 border-gray-400"
+                className="mt-7 uppercase font-bold self-start px-8 py-4 border-2 border-gray-400 "
             >
                 view all saved Items
             </button>
         </>
     );
 
-    return <div className="flex flex-col mt-5 ">{viewAll}</div>;
+    return <div className="flex flex-col mt-5  justify-start p-2">{viewAll}</div>;
 };
 
 export default ViewAll;

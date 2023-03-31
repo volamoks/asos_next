@@ -31,15 +31,15 @@ const SearchInput: FC = () => {
                 onClick={setOpen}
                 onChange={handChahge}
                 placeholder="   Search for items"
-                className="rounded-3xl w-max-screen-xl w-full my-1 h-[45px] relative z-30 border-2 pl-4"
+                className="  xl:flex rounded-3xl xl:w-max-screen-xl w-full my-1 xl:h-[45px] relative border-2 pl-4"
                 type="search"
                 value={value}
             />
-            <AiOutlineSearch
-                className="absolute top-3 right-2"
+            {/* <AiOutlineSearch
+                className="absolute top-0 right-16 xl:top-3 xl:right-2"
                 size="30px"
                 color="black"
-            />
+            /> */}
 
             <SearcModal
                 isOpen={isOpen}
@@ -49,7 +49,7 @@ const SearchInput: FC = () => {
         </form>
     );
 
-    return <div className="w-4/6  self-center ml-4 relative">{form}</div>;
+    return <div className=" hidden w-full xl:flex flex-col">{form}</div>;
 };
 
 export default SearchInput;

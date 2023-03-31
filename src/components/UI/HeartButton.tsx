@@ -26,6 +26,7 @@ const HeartButton: FC<heartBtnProps> = ({ size = '25px', item }) => {
         e.stopPropagation();
         addToFav(item);
     };
+
     const element = !isActive ? (
         <AiOutlineHeart
             size={size}

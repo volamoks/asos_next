@@ -6,12 +6,10 @@ const CreateAccount = () => {
 
     const hangleGoTo = (url: string) => {
         router.push(url);
-        
     };
     const create = (
         <div className="flex bg-gray-300 justify-between p-4">
             <div>
-                {' '}
                 <button
                     onClick={() => hangleGoTo('/login')}
                     className="underline"

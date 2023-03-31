@@ -17,7 +17,7 @@ const FooterList: FC<IFooterListProps> = ({ list }) => {
                 {list.children.map(line => (
                     <div
                         key={line.id}
-                        className="flex flex-row text-sm text-gray-500 py-2"
+                        className="flex flex-row text-sm text-gray-500 py-1"
                     >
                         {line.content.title}
                     </div>

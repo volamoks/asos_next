@@ -14,14 +14,14 @@ const SecondHeader = () => {
     };
 
     const modal = isOpen ? (
-        <div className="bg-black/50 absolute w-screen h-screen z-20 top-12"></div>
+        <div className="sm: none bg-black/50 absolute w-screen h-screen z-20 top-12"></div>
     ) : null;
 
     return (
         <div
             onMouseEnter={openModal}
             onMouseLeave={closeModal}
-            className="flex bg-[#666] h-[50px] relative"
+            className="hidden xl:flex bg-[#666] h-[50px] relative"
         >
             <HoverRow />
             {/* {modal} */}

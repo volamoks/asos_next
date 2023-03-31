@@ -40,6 +40,11 @@ export const authApi = createApi({
                 body: { items: { inFAv: [item] } },
             }),
         }),
+        getAllItems: builder.query({
+            query: () => ({
+                url: `/users`,
+            }),
+        }),
     }),
 });
 
@@ -49,4 +54,5 @@ export const {
     useSetItemsMutation,
     useSetItemsInCartMutation,
     useSetItemsInFavMutation,
+    useGetAllItemsQuery,
 } = authApi;

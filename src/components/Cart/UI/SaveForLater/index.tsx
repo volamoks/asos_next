@@ -10,17 +10,16 @@ import { IItemsInCartProps } from '../../interfaces';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 
 const SaveForLater: FC<IItemsInCartProps> = ({ item }) => {
-    const handleSaveForLater = (item: IItem | Product) => {
-        addToFav(item);
-    };
     const { addToFav } = useActions();
     const { inFav } = useAppSelector(state => state.asos);
 
-    const isInCart = inFav.findIndex(product => product.id === item.id) >= 0 ? true : false;
+    const handleSaveForLater = (item: IItem | Product) => {
+        addToFav(item);
+    };
 
-    console.log(isInCart);
+    const isInFav = inFav.findIndex(product => product.id === item.id) >= 0 ? true : false;
 
-    const button = !isInCart ? (
+    const button = !isInFav ? (
         <button
             onClick={() => handleSaveForLater(item)}
             className=" flex border-gray-200 border-2 px-4 min-w-[182px] my-4 self-start aligh-center"

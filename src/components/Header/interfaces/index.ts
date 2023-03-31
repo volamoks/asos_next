@@ -1,4 +1,4 @@
-import { Children3, Children4 } from '@/interfaces/asosInterfaces/categories';
+import { Children2, Children3, Children4 } from '@/interfaces/asosInterfaces/categories';
 import { ISearch } from '@/interfaces/asosInterfaces/search';
 
 export interface IModalBlockProps {
@@ -17,9 +17,9 @@ export interface IModalListHeadersProps {
     isModal: boolean;
 }
 export interface IModalContainsProps {
-    item: Children4[];
+    item: Children4[] | Children2[];
     type: string | undefined;
-    hadleGotoPage: (arg0: number | undefined) => void;
+    hadleGotoPage: (id: number) => void;
 }
 
 export enum TYPES {

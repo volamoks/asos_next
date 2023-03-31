@@ -17,7 +17,9 @@ const ItemsInCart: FC<IItemsInCartProps> = ({ data, total }) => {
             key={item.id}
             className="flex bg-white mt-5 pr-10 relative"
         >
-            <RemoveButton item={item} />
+            <div>
+                <RemoveButton item={item} />
+            </div>
 
             {data.length > 0 && (
                 <img
@@ -38,8 +40,8 @@ const ItemsInCart: FC<IItemsInCartProps> = ({ data, total }) => {
     ));
 
     const subTotal = (
-        <div className="flex  justify-end mt-5 bg-white">
-            <div className=" flex w-2/5 justify-between p-5">
+        <div className="flex gap-2 justify-end mt-5 bg-white">
+            <div className=" flex xl:w-2/5 justify-between p-5 gap-2">
                 <span className="font-bold uppercase">Sub-total</span>
                 <span>{total} USD</span>
             </div>
@@ -48,8 +50,8 @@ const ItemsInCart: FC<IItemsInCartProps> = ({ data, total }) => {
 
     const reservedModal = (
         <div className="flex justify-between p-3 bg-white">
-            <p className="uppercase font-bold">My bag</p>
-            <p className="">Items are reserved for 60 minutes</p>
+            <span className="uppercase font-bold">My bag</span>
+            <span className="">Items are reserved for 60 minutes</span>
         </div>
     );
 

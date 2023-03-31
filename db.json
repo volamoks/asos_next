@@ -7,121 +7,121 @@
       "lastName": "123",
       "password": "123",
       "items": {
-        "inFAv": [
+        "inCart": [
           {
-            "id": 204217242,
-            "name": "ASOS LUXE textured flare mini dress with tie shoulder in black",
-            "description": "<a href=\"/women/dresses/cat/?cid=8799\"><strong>Dresses</strong></a> by <a href=\"/women/a-to-z-of-brands/asos-luxe/cat/?cid=30058\"><strong>ASOS Luxe</strong></a><br><ul><li>More is more</li><li>Plunge neck</li><li>Tie straps</li><li>Zip-back fastening</li><li>Regular fit</li></ul>",
+            "id": 203743830,
+            "name": " Topshop Curve ruched long sleeve shirred top in black",
+            "description": "<a href=\"/women/tops/cat/?cid=4169\"><strong>Tops</strong></a> by <a href=\"/women/a-to-z-of-brands/topshop/cat/?cid=29299\"><strong>Topshop</strong></a><br><ul><li>Welcome to the next phase of Topshop</li><li>Ruched design</li><li>Crew neck</li><li>Long sleeves</li><li>Regular fit</li></ul>",
             "alternateNames": [
               {
                 "locale": "en-GB",
-                "title": "ASOS LUXE dobby godets mini dress with tie shoulder in black"
+                "title": " Topshop Curve ruched long sleeve shirred top in black"
               },
               {
                 "locale": "da-DK",
-                "title": "ASOS LUXE - Sort skaftvævet minikjole med kiler og bindebånd på skulderen"
+                "title": " Topshop Curve - Sort top med lange ærmer og rynker"
               },
               {
                 "locale": "de-DE",
-                "title": "ASOS LUXE – Minikleid aus schwarzem Dobby-Stoff mit Godet-Details und gebundenen Trägern"
+                "title": " Topshop Curve – Langärmliges, gerafftes Hängeroberteil in Schwarz"
               },
               {
                 "locale": "en-AU",
-                "title": "ASOS LUXE dobby godets mini dress with tie shoulder in black"
+                "title": " Topshop Curve ruched long sleeve shirred top in black"
               },
               {
                 "locale": "en-US",
-                "title": "ASOS LUXE textured flare mini dress with tie shoulder in black"
+                "title": " Topshop Curve ruched long sleeve shirred top in black"
               },
               {
                 "locale": "es-ES",
-                "title": "Vestido corto negro de tirantes anudados con godets de plumeti de ASOS Luxe"
+                "title": " Top negro fruncido de manga larga de Topshop Curve"
               },
               {
                 "locale": "fr-FR",
-                "title": "ASOS LUXE - Robe courte à godets en plumetis avec liens noués aux épaules - Noir"
+                "title": " Topshop Curve - Top froncé à manches longues - Noir"
               },
               {
                 "locale": "it-IT",
-                "title": "ASOS Luxe - Vestito corto godet nero plumetis con spalline allacciate"
+                "title": " Topshop Curve - Top arricciato nero a maniche lunghe"
               },
               {
                 "locale": "nl-NL",
-                "title": "ASOS LUXE - Mini jurk van dobbystof met gestrikte schouders in zwart"
+                "title": " Topshop Curve - Gerimpelde, gesmokte top met lange mouwen in zwart"
               },
               {
                 "locale": "pl-PL",
-                "title": "ASOS LUXE – Czarna sukienka mini z wiązaniem na ramionach i godetami z materiału dobby"
+                "title": " Topshop Curve – Marszczony czarny top z długim rękawem"
               },
               {
                 "locale": "sv-SE",
-                "title": "ASOS LUXE – Svart, dobbyvävd miniklänning med knytning på axlarna och klockad kjol"
+                "title": " Topshop Curve – Svart, smockad topp med rynkning och långa ärmar"
               }
             ],
             "localisedData": [
               {
                 "locale": "en-GB",
-                "title": "ASOS LUXE dobby godets mini dress with tie shoulder in black",
-                "pdpUrl": "https://www.asos.com/asos-luxe/asos-luxe-dobby-godets-mini-dress-with-tie-shoulder-in-black/prd/204217242"
-              },
-              {
-                "locale": "de-DE",
-                "title": "ASOS LUXE – Minikleid aus schwarzem Dobby-Stoff mit Godet-Details und gebundenen Trägern",
-                "pdpUrl": "https://www.asos.com/de/asos-luxe/asos-luxe-minikleid-aus-schwarzem-dobby-stoff-mit-godet-details-und-gebundenen-tragern/prd/204217242"
-              },
-              {
-                "locale": "es-ES",
-                "title": "Vestido corto negro de tirantes anudados con godets de plumeti de ASOS Luxe",
-                "pdpUrl": "https://www.asos.com/es/asos-luxe/vestido-corto-negro-de-tirantes-anudados-con-godets-de-plumeti-de-asos-luxe/prd/204217242"
+                "title": " Topshop Curve ruched long sleeve shirred top in black",
+                "pdpUrl": "https://www.asos.com/topshop/topshop-curve-ruched-long-sleeve-shirred-top-in-black/prd/203743830"
               },
               {
                 "locale": "fr-FR",
-                "title": "ASOS LUXE - Robe courte à godets en plumetis avec liens noués aux épaules - Noir",
-                "pdpUrl": "https://www.asos.com/fr/asos-luxe/asos-luxe-robe-courte-a-godets-en-plumetis-avec-liens-noues-aux-epaules-noir/prd/204217242"
+                "title": " Topshop Curve - Top froncé à manches longues - Noir",
+                "pdpUrl": "https://www.asos.com/fr/topshop/topshop-curve-top-fronce-a-manches-longues-noir/prd/203743830"
               },
               {
-                "locale": "en-US",
-                "title": "ASOS LUXE textured flare mini dress with tie shoulder in black",
-                "pdpUrl": "https://www.asos.com/us/asos-luxe/asos-luxe-textured-flare-mini-dress-with-tie-shoulder-in-black/prd/204217242"
-              },
-              {
-                "locale": "pl-PL",
-                "title": "ASOS LUXE – Czarna sukienka mini z wiązaniem na ramionach i godetami z materiału dobby",
-                "pdpUrl": "https://www.asos.com/pl/asos-luxe/asos-luxe-czarna-sukienka-mini-z-wiazaniem-na-ramionach-i-godetami-z-materiau-dobby/prd/204217242"
-              },
-              {
-                "locale": "it-IT",
-                "title": "ASOS Luxe - Vestito corto godet nero plumetis con spalline allacciate",
-                "pdpUrl": "https://www.asos.com/it/asos-luxe/asos-luxe-vestito-corto-godet-nero-plumetis-con-spalline-allacciate/prd/204217242"
-              },
-              {
-                "locale": "en-AU",
-                "title": "ASOS LUXE dobby godets mini dress with tie shoulder in black",
-                "pdpUrl": "https://www.asos.com/au/asos-luxe/asos-luxe-dobby-godets-mini-dress-with-tie-shoulder-in-black/prd/204217242"
-              },
-              {
-                "locale": "da-DK",
-                "title": "ASOS LUXE - Sort skaftvævet minikjole med kiler og bindebånd på skulderen",
-                "pdpUrl": "https://www.asos.com/dk/asos-luxe/asos-luxe-sort-skaftvvet-minikjole-med-kiler-og-bindeband-pa-skulderen/prd/204217242"
+                "locale": "de-DE",
+                "title": " Topshop Curve – Langärmliges, gerafftes Hängeroberteil in Schwarz",
+                "pdpUrl": "https://www.asos.com/de/topshop/topshop-curve-langarmliges-gerafftes-hangeroberteil-in-schwarz/prd/203743830"
               },
               {
                 "locale": "sv-SE",
-                "title": "ASOS LUXE – Svart, dobbyvävd miniklänning med knytning på axlarna och klockad kjol",
-                "pdpUrl": "https://www.asos.com/se/asos-luxe/asos-luxe-svart-dobbyvavd-miniklanning-med-knytning-pa-axlarna-och-klockad-kjol/prd/204217242"
+                "title": " Topshop Curve – Svart, smockad topp med rynkning och långa ärmar",
+                "pdpUrl": "https://www.asos.com/se/topshop/topshop-curve-svart-smockad-topp-med-rynkning-och-langa-armar/prd/203743830"
+              },
+              {
+                "locale": "en-AU",
+                "title": " Topshop Curve ruched long sleeve shirred top in black",
+                "pdpUrl": "https://www.asos.com/au/topshop/topshop-curve-ruched-long-sleeve-shirred-top-in-black/prd/203743830"
               },
               {
                 "locale": "nl-NL",
-                "title": "ASOS LUXE - Mini jurk van dobbystof met gestrikte schouders in zwart",
-                "pdpUrl": "https://www.asos.com/nl/asos-luxe/asos-luxe-mini-jurk-van-dobbystof-met-gestrikte-schouders-in-zwart/prd/204217242"
+                "title": " Topshop Curve - Gerimpelde, gesmokte top met lange mouwen in zwart",
+                "pdpUrl": "https://www.asos.com/nl/topshop/topshop-curve-gerimpelde-gesmokte-top-met-lange-mouwen-in-zwart/prd/203743830"
+              },
+              {
+                "locale": "it-IT",
+                "title": " Topshop Curve - Top arricciato nero a maniche lunghe",
+                "pdpUrl": "https://www.asos.com/it/topshop/topshop-curve-top-arricciato-nero-a-maniche-lunghe/prd/203743830"
+              },
+              {
+                "locale": "da-DK",
+                "title": " Topshop Curve - Sort top med lange ærmer og rynker",
+                "pdpUrl": "https://www.asos.com/dk/topshop/topshop-curve-sort-top-med-lange-rmer-og-rynker/prd/203743830"
+              },
+              {
+                "locale": "es-ES",
+                "title": " Top negro fruncido de manga larga de Topshop Curve",
+                "pdpUrl": "https://www.asos.com/es/topshop/top-negro-fruncido-de-manga-larga-de-topshop-curve/prd/203743830"
+              },
+              {
+                "locale": "pl-PL",
+                "title": " Topshop Curve – Marszczony czarny top z długim rękawem",
+                "pdpUrl": "https://www.asos.com/pl/topshop/topshop-curve-marszczony-czarny-top-z-dugim-rekawem/prd/203743830"
+              },
+              {
+                "locale": "en-US",
+                "title": " Topshop Curve ruched long sleeve shirred top in black",
+                "pdpUrl": "https://www.asos.com/us/topshop/topshop-curve-ruched-long-sleeve-shirred-top-in-black/prd/203743830"
               }
             ],
             "gender": "Women",
-            "productCode": "125873928",
+            "productCode": "122728960",
             "pdpLayout": "Core",
             "brand": {
-              "brandId": 16631,
-              "name": "ASOS Luxe",
-              "description": "Get ready to send those ‘What you wearing?’ texts, because <a href=\"/women/a-to-z-of-brands/asos-luxe/cat/?cid=30058\"><strong>ASOS LUXE</strong></a> is serving elevated looks that'll dominate your IG feed and beyond. Make high-key sets the first stop on your BNO agenda, or turn up and stand out in ultra-glam dresses and statement outerwear. Brunch-to-bar on the cards? With embellished denim and close-cut tailoring, our <a href=\"/women/a-to-z-of-brands/asos-luxe/cat/?cid=30058\"><strong>ASOS LUXE</strong></a> daywear range is out there doing the most."
+              "brandId": 16305,
+              "name": "Topshop",
+              "description": "<a href=\"/women/a-to-z-of-brands/topshop/cat/?cid=29299\"><strong>Topshop</strong></a> is entering a new era. Retaining its fashion authority and the very best of its heritage, while celebrating iconic styles such as the Jamie and Joni jean, and embracing the new. With that unique London spirit remaining at the core of the collections, join us on a journey of exploration and discovery. Shop the entire range only at ASOS in petite, maternity, tall and curve edits and expect dresses, tops, tailoring and shoes."
             },
             "sizeGuide": null,
             "sizeGuideApiUrl": null,
@@ -129,53 +129,53 @@
             "isOneSize": false,
             "isInStock": true,
             "countryOfManufacture": null,
-            "hasVariantsWithProp65Risk": true,
+            "hasVariantsWithProp65Risk": false,
             "webCategories": [],
             "variants": [
               {
-                "id": 204217267,
-                "name": "ASOS LUXE textured flare mini dress with tie shoulder in black",
-                "sizeId": 441013,
-                "brandSize": "US 0",
+                "id": 203743832,
+                "name": " Topshop Curve ruched long sleeve shirred top in black",
+                "sizeId": 693573,
+                "brandSize": "UK 18",
                 "sizeDescription": "",
-                "displaySizeText": "US 0",
-                "sizeOrder": 1,
-                "sku": "125873939",
+                "displaySizeText": "UK 18",
+                "sizeOrder": 0,
+                "sku": "122728964",
                 "isLowInStock": true,
                 "isInStock": true,
                 "isAvailable": true,
-                "colourWayId": 204217246,
+                "colourWayId": 203743831,
                 "colourCode": null,
                 "colour": "Black",
                 "price": {
                   "current": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 55,
+                    "text": "$55.00",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "previous": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 55,
+                    "text": "$55.00",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "rrp": {
                     "value": null,
                     "text": null,
-                    "versionId": "REGP0000020009000000027100600",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "xrp": {
-                    "value": 75.99,
-                    "text": "£75.99",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 34.83,
+                    "text": "£34.83",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "5742"
                   },
                   "currency": "USD",
                   "isMarkedDown": false,
                   "isOutletPrice": false,
-                  "startDateTime": "2023-03-26T03:10:24Z",
+                  "startDateTime": "2023-02-21T08:00:59Z",
                   "previousEndDate": null,
                   "lowestPriceInLast30DaysValue": null,
                   "lowestPriceInLast30DaysText": null,
@@ -184,54 +184,54 @@
                   "wasPriceStartDate": null
                 },
                 "isPrimary": true,
-                "isProp65Risk": true,
+                "isProp65Risk": false,
                 "ean": null,
                 "seller": null
               },
               {
-                "id": 204217261,
-                "name": "ASOS LUXE textured flare mini dress with tie shoulder in black",
-                "sizeId": 441015,
-                "brandSize": "US 2",
+                "id": 203743833,
+                "name": " Topshop Curve ruched long sleeve shirred top in black",
+                "sizeId": 693577,
+                "brandSize": "UK 26",
                 "sizeDescription": "",
-                "displaySizeText": "US 2",
-                "sizeOrder": 2,
-                "sku": "125873937",
+                "displaySizeText": "UK 26",
+                "sizeOrder": 0,
+                "sku": "122728961",
                 "isLowInStock": true,
                 "isInStock": true,
                 "isAvailable": true,
-                "colourWayId": 204217246,
+                "colourWayId": 203743831,
                 "colourCode": null,
                 "colour": "Black",
                 "price": {
                   "current": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 55,
+                    "text": "$55.00",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "previous": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 55,
+                    "text": "$55.00",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "rrp": {
                     "value": null,
                     "text": null,
-                    "versionId": "REGP0000020009000000027100600",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "xrp": {
-                    "value": 75.99,
-                    "text": "£75.99",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 34.83,
+                    "text": "£34.83",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "5742"
                   },
                   "currency": "USD",
                   "isMarkedDown": false,
                   "isOutletPrice": false,
-                  "startDateTime": "2023-03-26T03:11:00Z",
+                  "startDateTime": "2023-02-21T08:00:59Z",
                   "previousEndDate": null,
                   "lowestPriceInLast30DaysValue": null,
                   "lowestPriceInLast30DaysText": null,
@@ -240,54 +240,54 @@
                   "wasPriceStartDate": null
                 },
                 "isPrimary": true,
-                "isProp65Risk": true,
+                "isProp65Risk": false,
                 "ean": null,
                 "seller": null
               },
               {
-                "id": 204217264,
-                "name": "ASOS LUXE textured flare mini dress with tie shoulder in black",
-                "sizeId": 441012,
-                "brandSize": "US 4",
+                "id": 203743834,
+                "name": " Topshop Curve ruched long sleeve shirred top in black",
+                "sizeId": 693572,
+                "brandSize": "UK 16",
                 "sizeDescription": "",
-                "displaySizeText": "US 4",
-                "sizeOrder": 3,
-                "sku": "125873938",
-                "isLowInStock": false,
+                "displaySizeText": "UK 16",
+                "sizeOrder": 0,
+                "sku": "122728963",
+                "isLowInStock": true,
                 "isInStock": true,
                 "isAvailable": true,
-                "colourWayId": 204217246,
+                "colourWayId": 203743831,
                 "colourCode": null,
                 "colour": "Black",
                 "price": {
                   "current": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 55,
+                    "text": "$55.00",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "previous": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 55,
+                    "text": "$55.00",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "rrp": {
                     "value": null,
                     "text": null,
-                    "versionId": "REGP0000020009000000027100600",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "xrp": {
-                    "value": 75.99,
-                    "text": "£75.99",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 34.83,
+                    "text": "£34.83",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "5742"
                   },
                   "currency": "USD",
                   "isMarkedDown": false,
                   "isOutletPrice": false,
-                  "startDateTime": "2023-03-24T01:57:27Z",
+                  "startDateTime": "2023-02-21T08:00:59Z",
                   "previousEndDate": null,
                   "lowestPriceInLast30DaysValue": null,
                   "lowestPriceInLast30DaysText": null,
@@ -296,54 +296,54 @@
                   "wasPriceStartDate": null
                 },
                 "isPrimary": true,
-                "isProp65Risk": true,
+                "isProp65Risk": false,
                 "ean": null,
                 "seller": null
               },
               {
-                "id": 204217258,
-                "name": "ASOS LUXE textured flare mini dress with tie shoulder in black",
-                "sizeId": 441016,
-                "brandSize": "US 6",
+                "id": 203743835,
+                "name": " Topshop Curve ruched long sleeve shirred top in black",
+                "sizeId": 693574,
+                "brandSize": "UK 20",
                 "sizeDescription": "",
-                "displaySizeText": "US 6",
-                "sizeOrder": 4,
-                "sku": "125873932",
-                "isLowInStock": false,
+                "displaySizeText": "UK 20",
+                "sizeOrder": 0,
+                "sku": "122728965",
+                "isLowInStock": true,
                 "isInStock": true,
                 "isAvailable": true,
-                "colourWayId": 204217246,
+                "colourWayId": 203743831,
                 "colourCode": null,
                 "colour": "Black",
                 "price": {
                   "current": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 55,
+                    "text": "$55.00",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "previous": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 55,
+                    "text": "$55.00",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "rrp": {
                     "value": null,
                     "text": null,
-                    "versionId": "REGP0000020009000000027100600",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "xrp": {
-                    "value": 75.99,
-                    "text": "£75.99",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 34.83,
+                    "text": "£34.83",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "5742"
                   },
                   "currency": "USD",
                   "isMarkedDown": false,
                   "isOutletPrice": false,
-                  "startDateTime": "2023-03-24T01:58:05Z",
+                  "startDateTime": "2023-02-21T08:00:59Z",
                   "previousEndDate": null,
                   "lowestPriceInLast30DaysValue": null,
                   "lowestPriceInLast30DaysText": null,
@@ -352,54 +352,54 @@
                   "wasPriceStartDate": null
                 },
                 "isPrimary": true,
-                "isProp65Risk": true,
+                "isProp65Risk": false,
                 "ean": null,
                 "seller": null
               },
               {
-                "id": 204217270,
-                "name": "ASOS LUXE textured flare mini dress with tie shoulder in black",
-                "sizeId": 441014,
-                "brandSize": "US 8",
+                "id": 203743836,
+                "name": " Topshop Curve ruched long sleeve shirred top in black",
+                "sizeId": 693576,
+                "brandSize": "UK 24",
                 "sizeDescription": "",
-                "displaySizeText": "US 8",
-                "sizeOrder": 5,
-                "sku": "125873933",
-                "isLowInStock": false,
+                "displaySizeText": "UK 24",
+                "sizeOrder": 0,
+                "sku": "122728966",
+                "isLowInStock": true,
                 "isInStock": true,
                 "isAvailable": true,
-                "colourWayId": 204217246,
+                "colourWayId": 203743831,
                 "colourCode": null,
                 "colour": "Black",
                 "price": {
                   "current": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 55,
+                    "text": "$55.00",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "previous": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 55,
+                    "text": "$55.00",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "rrp": {
                     "value": null,
                     "text": null,
-                    "versionId": "REGP0000020009000000027100600",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "xrp": {
-                    "value": 75.99,
-                    "text": "£75.99",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 34.83,
+                    "text": "£34.83",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "5742"
                   },
                   "currency": "USD",
                   "isMarkedDown": false,
                   "isOutletPrice": false,
-                  "startDateTime": "2023-03-24T01:58:56Z",
+                  "startDateTime": "2023-02-21T08:00:59Z",
                   "previousEndDate": null,
                   "lowestPriceInLast30DaysValue": null,
                   "lowestPriceInLast30DaysText": null,
@@ -408,54 +408,54 @@
                   "wasPriceStartDate": null
                 },
                 "isPrimary": true,
-                "isProp65Risk": true,
+                "isProp65Risk": false,
                 "ean": null,
                 "seller": null
               },
               {
-                "id": 204217255,
-                "name": "ASOS LUXE textured flare mini dress with tie shoulder in black",
-                "sizeId": 441018,
-                "brandSize": "US 10",
+                "id": 203743837,
+                "name": " Topshop Curve ruched long sleeve shirred top in black",
+                "sizeId": 693575,
+                "brandSize": "UK 22",
                 "sizeDescription": "",
-                "displaySizeText": "US 10",
-                "sizeOrder": 6,
-                "sku": "125873936",
-                "isLowInStock": false,
+                "displaySizeText": "UK 22",
+                "sizeOrder": 0,
+                "sku": "122728962",
+                "isLowInStock": true,
                 "isInStock": true,
                 "isAvailable": true,
-                "colourWayId": 204217246,
+                "colourWayId": 203743831,
                 "colourCode": null,
                 "colour": "Black",
                 "price": {
                   "current": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 55,
+                    "text": "$55.00",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "previous": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 55,
+                    "text": "$55.00",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "rrp": {
                     "value": null,
                     "text": null,
-                    "versionId": "REGP0000020009000000027100600",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "0"
                   },
                   "xrp": {
-                    "value": 75.99,
-                    "text": "£75.99",
-                    "versionId": "REGP0000020009000000027100600",
+                    "value": 34.83,
+                    "text": "£34.83",
+                    "versionId": "REGP0000020009000000000000000",
                     "conversionId": "5742"
                   },
                   "currency": "USD",
                   "isMarkedDown": false,
                   "isOutletPrice": false,
-                  "startDateTime": "2023-03-25T01:55:58Z",
+                  "startDateTime": "2023-02-21T08:00:59Z",
                   "previousEndDate": null,
                   "lowestPriceInLast30DaysValue": null,
                   "lowestPriceInLast30DaysText": null,
@@ -464,119 +464,7 @@
                   "wasPriceStartDate": null
                 },
                 "isPrimary": true,
-                "isProp65Risk": true,
-                "ean": null,
-                "seller": null
-              },
-              {
-                "id": 204217252,
-                "name": "ASOS LUXE textured flare mini dress with tie shoulder in black",
-                "sizeId": 441019,
-                "brandSize": "US 12",
-                "sizeDescription": "",
-                "displaySizeText": "US 12",
-                "sizeOrder": 7,
-                "sku": "125873934",
-                "isLowInStock": false,
-                "isInStock": true,
-                "isAvailable": true,
-                "colourWayId": 204217246,
-                "colourCode": null,
-                "colour": "Black",
-                "price": {
-                  "current": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
-                    "conversionId": "0"
-                  },
-                  "previous": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
-                    "conversionId": "0"
-                  },
-                  "rrp": {
-                    "value": null,
-                    "text": null,
-                    "versionId": "REGP0000020009000000027100600",
-                    "conversionId": "0"
-                  },
-                  "xrp": {
-                    "value": 75.99,
-                    "text": "£75.99",
-                    "versionId": "REGP0000020009000000027100600",
-                    "conversionId": "5742"
-                  },
-                  "currency": "USD",
-                  "isMarkedDown": false,
-                  "isOutletPrice": false,
-                  "startDateTime": "2023-03-24T01:57:13Z",
-                  "previousEndDate": null,
-                  "lowestPriceInLast30DaysValue": null,
-                  "lowestPriceInLast30DaysText": null,
-                  "lowestPriceInLast30DaysEndDate": null,
-                  "lowestPriceInLast30DaysPercentage": null,
-                  "wasPriceStartDate": null
-                },
-                "isPrimary": true,
-                "isProp65Risk": true,
-                "ean": null,
-                "seller": null
-              },
-              {
-                "id": 204217249,
-                "name": "ASOS LUXE textured flare mini dress with tie shoulder in black",
-                "sizeId": 441017,
-                "brandSize": "US 14",
-                "sizeDescription": "",
-                "displaySizeText": "US 14",
-                "sizeOrder": 8,
-                "sku": "125873935",
-                "isLowInStock": false,
-                "isInStock": true,
-                "isAvailable": true,
-                "colourWayId": 204217246,
-                "colourCode": null,
-                "colour": "Black",
-                "price": {
-                  "current": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
-                    "conversionId": "0"
-                  },
-                  "previous": {
-                    "value": 120,
-                    "text": "$120.00",
-                    "versionId": "REGP0000020009000000027100600",
-                    "conversionId": "0"
-                  },
-                  "rrp": {
-                    "value": null,
-                    "text": null,
-                    "versionId": "REGP0000020009000000027100600",
-                    "conversionId": "0"
-                  },
-                  "xrp": {
-                    "value": 75.99,
-                    "text": "£75.99",
-                    "versionId": "REGP0000020009000000027100600",
-                    "conversionId": "5742"
-                  },
-                  "currency": "USD",
-                  "isMarkedDown": false,
-                  "isOutletPrice": false,
-                  "startDateTime": "2023-03-24T01:58:13Z",
-                  "previousEndDate": null,
-                  "lowestPriceInLast30DaysValue": null,
-                  "lowestPriceInLast30DaysText": null,
-                  "lowestPriceInLast30DaysEndDate": null,
-                  "lowestPriceInLast30DaysPercentage": null,
-                  "wasPriceStartDate": null
-                },
-                "isPrimary": true,
-                "isProp65Risk": true,
+                "isProp65Risk": false,
                 "ean": null,
                 "seller": null
               }
@@ -584,15 +472,15 @@
             "media": {
               "images": [
                 {
-                  "url": "images.asos-media.com/products/asos-luxe-textured-flare-mini-dress-with-tie-shoulder-in-black/204217242-1-black",
+                  "url": "images.asos-media.com/products/topshop-curve-ruched-long-sleeve-shirred-top-in-black/203743830-1-black",
                   "type": "Standard1",
-                  "colourWayId": 204217246,
+                  "colourWayId": 203743831,
                   "colourCode": "",
-                  "colour": "Black",
+                  "colour": "BLACK",
                   "isPrimary": true
                 },
                 {
-                  "url": "images.asos-media.com/products/asos-luxe-textured-flare-mini-dress-with-tie-shoulder-in-black/204217242-2",
+                  "url": "images.asos-media.com/products/topshop-curve-ruched-long-sleeve-shirred-top-in-black/203743830-2",
                   "type": "Standard2",
                   "colourWayId": null,
                   "colourCode": "",
@@ -600,7 +488,7 @@
                   "isPrimary": false
                 },
                 {
-                  "url": "images.asos-media.com/products/asos-luxe-textured-flare-mini-dress-with-tie-shoulder-in-black/204217242-3",
+                  "url": "images.asos-media.com/products/topshop-curve-ruched-long-sleeve-shirred-top-in-black/203743830-3",
                   "type": "Standard3",
                   "colourWayId": null,
                   "colourCode": "",
@@ -608,7 +496,7 @@
                   "isPrimary": false
                 },
                 {
-                  "url": "images.asos-media.com/products/asos-luxe-textured-flare-mini-dress-with-tie-shoulder-in-black/204217242-4",
+                  "url": "images.asos-media.com/products/topshop-curve-ruched-long-sleeve-shirred-top-in-black/203743830-4",
                   "type": "Standard4",
                   "colourWayId": null,
                   "colourCode": "",
@@ -622,40 +510,40 @@
             },
             "badges": [],
             "info": {
-              "aboutMe": "Textured fabric: lightweight with a jacquard spot pattern<br><br>Contrast: 100% Polyester, Fabric 1: 90% Polyester, 10% Elastane, Lining: 100% Polyester.",
-              "sizeAndFit": "Model's height: 170.5cm / 5' 7''<br>Model is wearing: UK 8/ EU 36/ US 4",
+              "aboutMe": "Plain-woven fabric<br><br>Main: 100% Polyester.",
+              "sizeAndFit": "Model wears: UK 18/ EU 46/ US 14<br>Model's height: 175cm/5'9\"",
               "careInfo": "Machine wash according to instructions on care labels"
             },
             "shippingRestriction": null,
             "price": {
               "current": {
-                "value": 120,
-                "text": "$120.00",
-                "versionId": "REGP0000020009000000027100600",
+                "value": 55,
+                "text": "$55.00",
+                "versionId": "REGP0000020009000000000000000",
                 "conversionId": "0"
               },
               "previous": {
-                "value": 120,
-                "text": "$120.00",
-                "versionId": "REGP0000020009000000027100600",
+                "value": 55,
+                "text": "$55.00",
+                "versionId": "REGP0000020009000000000000000",
                 "conversionId": "0"
               },
               "rrp": {
                 "value": null,
                 "text": null,
-                "versionId": "REGP0000020009000000027100600",
+                "versionId": "REGP0000020009000000000000000",
                 "conversionId": "0"
               },
               "xrp": {
-                "value": 75.99,
-                "text": "£75.99",
-                "versionId": "REGP0000020009000000027100600",
+                "value": 34.83,
+                "text": "£34.83",
+                "versionId": "REGP0000020009000000000000000",
                 "conversionId": "5742"
               },
               "currency": "USD",
               "isMarkedDown": false,
               "isOutletPrice": false,
-              "startDateTime": "2023-03-24T01:57:13Z",
+              "startDateTime": "2023-02-21T08:00:59Z",
               "previousEndDate": null,
               "lowestPriceInLast30DaysValue": null,
               "lowestPriceInLast30DaysText": null,
@@ -664,66 +552,46 @@
               "wasPriceStartDate": null
             },
             "isDeadProduct": false,
-            "rating": null,
+            "rating": {
+              "averageOverallRating": 1.7,
+              "averageOverallStarRating": 1.5,
+              "totalReviewCount": 3
+            },
             "productType": {
-              "id": 8416,
-              "name": "Dresses"
+              "id": 8392,
+              "name": "Blouses"
             },
             "plpIds": [
               {
-                "id": 8799,
+                "id": 4169,
                 "type": "SEO"
               },
               {
-                "id": 8857,
+                "id": 9577,
                 "type": "Standard"
               },
               {
-                "id": 9419,
+                "id": 9578,
                 "type": "Standard"
               },
               {
-                "id": 13597,
+                "id": 9581,
                 "type": "Standard"
               },
               {
-                "id": 13930,
+                "id": 11318,
                 "type": "Standard"
               },
               {
-                "id": 13934,
+                "id": 15199,
                 "type": "Standard"
               },
               {
-                "id": 15210,
+                "id": 17334,
                 "type": "Standard"
               },
               {
-                "id": 15355,
-                "type": "Standard"
-              },
-              {
-                "id": 15363,
-                "type": "Standard"
-              },
-              {
-                "id": 15372,
-                "type": "Standard"
-              },
-              {
-                "id": 15495,
-                "type": "Standard"
-              },
-              {
-                "id": 17242,
-                "type": "Standard"
-              },
-              {
-                "id": 17243,
-                "type": "Standard"
-              },
-              {
-                "id": 18755,
+                "id": 17405,
                 "type": "Standard"
               },
               {
@@ -731,16 +599,36 @@
                 "type": "Brand"
               },
               {
-                "id": 30057,
+                "id": 28177,
+                "type": "Standard"
+              },
+              {
+                "id": 29298,
+                "type": "Standard"
+              },
+              {
+                "id": 30236,
                 "type": "Standard"
               },
               {
                 "id": 50005,
                 "type": "Standard"
+              },
+              {
+                "id": 50028,
+                "type": "Standard"
+              },
+              {
+                "id": 50697,
+                "type": "Standard"
+              },
+              {
+                "id": 50742,
+                "type": "Standard"
               }
             ],
             "baseUrl": "https://www.asos.com",
-            "size": "US 0",
+            "size": "UK 18",
             "quantity": 1
           }
         ]

@@ -16,6 +16,7 @@
         "@types/react": "18.0.28",
         "@types/react-dom": "18.0.11",
         "@types/react-redux": "^7.1.25",
+        "babel-plugin-styled-components": "^2.0.7",
         "concurrently": "^7.6.0",
         "eslint": "8.36.0",
         "eslint-config-next": "13.2.4",
@@ -27,6 +28,7 @@
         "react-redux": "^8.0.5",
         "react-spinner-material": "^1.4.0",
         "redux": "^4.2.1",
+        "redux-persist": "^6.0.0",
         "typescript": "5.0.2"
     },
     "devDependencies": {

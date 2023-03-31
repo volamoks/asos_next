@@ -4,24 +4,25 @@ import React from 'react';
 const BigImgButtons = () => {
     const router = useRouter();
 
+    const btnArr = [
+        { id: 1, title: 'New In' },
+        { id: 1, title: 'Shop Asos' },
+    ];
+
     const btn = (
         <>
-            <button
-                onClick={() => router.push('/items/50698')}
-                className=" bg-white font-bold text-xl py-4 px-12 mx-2"
-            >
-                New In
-            </button>
-
-            <button
-                onClick={() => router.push('/items/17413')}
-                className=" bg-white font-bold text-xl py-4 px-12 "
-            >
-                Shop Asos
-            </button>
+            {btnArr.map(item => (
+                <button
+                    key={item.id}
+                    onClick={() => router.push('/items/50698')}
+                    className=" bg-white font-bold p-2 text-base xl:text-xl xl:py-4 xl:px-12 "
+                >
+                    {item.title}
+                </button>
+            ))}
         </>
     );
-    return <div className="absolute top-[500px] left-[500px] flex">{btn}</div>;
+    return <div className="absolute bottom-[15px]  flex gap-2 justify-center w-full">{btn}</div>;
 };
 
 export default BigImgButtons;

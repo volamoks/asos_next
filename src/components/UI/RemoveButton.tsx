@@ -20,6 +20,7 @@ const RemoveButton: FC<IRemoveButtonProps> = ({ item }) => {
     const handleAddToBag = (product: IItemIncart) => {
         addToBag(product);
     };
+
     return (
         <>
             <AiOutlineClose

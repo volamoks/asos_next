@@ -1,17 +1,35 @@
-import Spinner from '@/components/UI/Spinner';
+import { useAppSelector } from '@/hooks/typedHooks';
+import { ICategory } from '@/interfaces/asosInterfaces/categories';
 import { FC } from 'react';
-import { ISecondatyImageProps } from '../interfaces';
 import MainCardComp from './ImageCard';
 
-const SecondaryImg: FC<ISecondatyImageProps> = ({ data }) => {
+interface ISecondaryImgProps {
+    data: ICategory | undefined;
+}
+
+const SecondaryImg: FC<ISecondaryImgProps> = ({ data }) => {
+    const { storeGen } = useAppSelector(state => state.asos);
+    if (!data) return <div />;
+
+    const index = storeGen === 'MEN' ? 0 : 1;
+
     const images = (
-        <div className="flex max-w-screen-xl  my-6 justify-between">
+        <div className="grid grid-cols-2 max-w-screen-xl xl:grid-cols-4  my-6 justify-between gap-2">
             {data &&
-                data.products.slice(0, 4).map(product => (
-                    <div key={product.id}>
-                        <MainCardComp item={product} />
-                    </div>
-                ))}
+                data.navigation[index].children[4].children[0].children[2].children
+                    .slice(2, 6)
+                    .map(product => (
+                        <div
+                            key={product.id}
+                            className="flex flex-col-2"
+                        >
+                            <MainCardComp
+                                item={product}
+                                width={300}
+                                height={300}
+                            />
+                        </div>
+                    ))}
         </div>
     );
     return <>{images}</>;

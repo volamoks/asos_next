@@ -7,6 +7,7 @@ import Price from './Price';
 import SizeComponent from './Sizes';
 
 import { IItemPageProps } from '../../Interfaces';
+import ViewAll from '@/components/Cart/components/ItemsInCartInfo/ViewAll/ViewAll';
 
 const Description: FC<IItemPageProps> = ({ item }) => {
     const [size, setSize] = useState(item?.variants[0].displaySizeText);
@@ -21,7 +22,7 @@ const Description: FC<IItemPageProps> = ({ item }) => {
         </div>
     );
     return (
-        <div className="flex w-1/4 m-10 ">
+        <div className="flex xl:w-1/4  mx-10 ">
             <div className="flex flex-col ">
                 <Price item={item} />
 

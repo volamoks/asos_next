@@ -1,7 +1,7 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
-import { IoPersonOutline } from 'react-icons/io5';
-import { AiOutlineHeart } from 'react-icons/ai';
+import { IoPerson, IoPersonOutline } from 'react-icons/io5';
+import { AiOutlineHeart, AiOutlineSearch } from 'react-icons/ai';
 import Link from 'next/link';
 import { BsBag, BsFillBagFill } from 'react-icons/bs';
 import { useRouter } from 'next/router';
@@ -10,9 +10,11 @@ import AccountModal from './Account';
 
 const IconsComponent: FC = () => {
     const router = useRouter();
-
+    const { loggedUser } = useAppSelector(state => state.asos);
     const { inBag } = useAppSelector(state => state.asos);
+
     const [isAccountModal, setInAccountModal] = useState(false);
+
     const hadleGoToPage = (link: string) => {
         router.push(link);
     };
@@ -22,19 +24,46 @@ const IconsComponent: FC = () => {
     };
 
     return (
-        <div className="flex w-1/5 justify-end self-center mr-4 relative">
-            <div className="mr-4 cursor-pointer">
+        <div className="flex  gap-4 justify-end relative my-auto">
+            <div className=" xl:hidden ">
                 <button onClick={handleOpenAccount}>
-                    <IoPersonOutline
+                    <AiOutlineSearch
                         size="30px"
                         color="white"
                     />
                 </button>
-                <button>
-                    <AccountModal isAccountModal={isAccountModal} />
+            </div>
+            <div className="xl:flex absolute right-[180px] hidden">
+                <button onClick={handleOpenAccount}>
+                    <AiOutlineSearch
+                        size="30px"
+                        color="black"
+                    />
                 </button>
             </div>
-            <div className="mr-4 cursor-pointer">
+
+            <div className=" ">
+                <button onClick={handleOpenAccount}>
+                    {loggedUser.isAuth ? (
+                        <IoPerson
+                            size="30px"
+                            color="white"
+                        />
+                    ) : (
+                        <IoPersonOutline
+                            size="30px"
+                            color="white"
+                        />
+                    )}
+                </button>
+                <div>
+                    <AccountModal
+                        isAccountModal={isAccountModal}
+                        userData={loggedUser}
+                    />
+                </div>
+            </div>
+            <div className="">
                 <button>
                     <AiOutlineHeart
                         onClick={() => hadleGoToPage('/favorites')}
@@ -44,7 +73,7 @@ const IconsComponent: FC = () => {
                 </button>
             </div>
 
-            <div className="mr-4 cursor-pointer">
+            <div className=" ">
                 {inBag.length > 0 ? (
                     <BsFillBagFill
                         onClick={() => hadleGoToPage('/cart')}

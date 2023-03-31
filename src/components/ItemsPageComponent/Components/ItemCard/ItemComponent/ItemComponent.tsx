@@ -45,10 +45,10 @@ const ItemComponent: FC<IitemsProps> = ({ item }) => {
                 <div className=" absolute  top-[20px]">
                     <DiscountLabel item={item} />
                 </div>
-                <div className=" absolute right-2 top-[340px]">
+                <div className=" absolute right-2  top-[240px] xl:top-[340px]">
                     <HeartButton item={item} />
                 </div>
-                <div className=" absolute right-0 top-[300px]">
+                <div className=" absolute right-0 top-[200px] xl:top-[300px]">
                     <SellingFastLabel item={item} />
                 </div>
 

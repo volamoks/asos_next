@@ -17,16 +17,20 @@ const ItemPicComponent: FC<IPicsProps> = ({ data: { images } }) => {
     };
 
     return (
-        <div className="flex justify-end mt-10 w-2/4 sticky">
-            <SecondaryImages
-                images={images}
-                setBigImg={setBigImg}
-            />
-            <PrimaryImg
-                images={images}
-                bigImage={bigImage}
-                setBigImage={setBigImage}
-            />
+        <div className="flex flex-cols-2 ">
+            <div className="hidden xl:flex justify-end  xl:w-1/4 ">
+                <SecondaryImages
+                    images={images}
+                    setBigImg={setBigImg}
+                />
+            </div>
+            <div className=" xl:flex justify-center xl:w-3/4 mx-auto">
+                <PrimaryImg
+                    images={images}
+                    bigImage={bigImage}
+                    setBigImage={setBigImage}
+                />
+            </div>
         </div>
     );
 };

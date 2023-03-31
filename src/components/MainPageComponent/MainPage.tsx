@@ -10,27 +10,23 @@ import BigImgButtons from './UI/BigImgButtons';
 import SecondaryImg from './SecondaryImages';
 import ColorBorderImages from './components/ColorBorderImages';
 import MainImage from './components/MainImage';
+import Spinner from '../UI/Spinner';
 
 const MainListItems = () => {
-    const { data: categoryData } = useGetcategoryQuery('');
+    const { data: categoryData, isLoading } = useGetcategoryQuery('');
     const { storeGen } = useAppSelector(state => state.asos);
 
     const storeIndex = storeGen === 'MEN' ? 0 : 2;
-    const catIndex = 20;
 
-    const selectedCategory =
-        categoryData?.brands[storeIndex].children[catIndex].link.categoryId?.toString();
-
-    const { data: selectedCategoryData, isLoading } = useGetItemsQuery(selectedCategory);
-
-    if (!selectedCategoryData) return <div className=" max-w-screen-xl min-h-screen " />;
+    if (isLoading) return <Spinner />;
+    if (!categoryData) return <div className=" max-w-screen-xl min-h-screen " />;
 
     return (
-        <div className=" max-w-screen-xl min-h-[calc(100vh-400px-50px)] mx-auto relative">
+        <div className=" sm:width-full xl:max-w-screen-xl xl:min-h-[calc(100vh-400px-50px)] mx-auto relative ">
             <div className="flex flex-col">
                 <MainImage storeIndex={storeIndex} />
-                <SecondaryImg data={selectedCategoryData} />
-                <ColorBorderImages data={selectedCategoryData} />
+                <SecondaryImg data={categoryData} />
+                <ColorBorderImages data={categoryData} />
                 <TopBrandCategories
                     data={categoryData?.navigation}
                     gender={storeGen}

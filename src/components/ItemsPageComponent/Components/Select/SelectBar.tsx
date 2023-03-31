@@ -28,7 +28,7 @@ const SelectBar: FC<ISelectBarProps> = ({ data }) => {
                     />
                 </div>
             ))}
-            <div className="flex ">
+            <div className="none xl:flex ">
                 {filters.map((item, i) => (
                     <div key={nanoid()}>
                         <FilterButtons
@@ -42,7 +42,7 @@ const SelectBar: FC<ISelectBarProps> = ({ data }) => {
         </>
     );
 
-    return <div className="bg-gray-100 grid grid-cols-6 gap-4">{select}</div>;
+    return <div className="bg-gray-100  hidden xl:grid grid-cols-6 gap-4">{select}</div>;
 };
 
 export default SelectBar;

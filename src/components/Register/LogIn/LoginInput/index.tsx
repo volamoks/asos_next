@@ -2,15 +2,15 @@ import { useActions } from '@/hooks/combineActions';
 import { useGetUsersQuery } from '@/services/api/authApi';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
+
 import InputForm from '../../SignUp/Ui/InputForm';
 
 const LoginInput = () => {
     const [userData, setUserData] = useState({ email: '', password: '', id: '' });
     const router = useRouter();
     const { setAuth } = useActions();
-    const [isLogin, setIsLogin] = useState(false);
 
-    const handleInput = (e, item) => {
+    const handleInput = (e: React.ChangeEvent<HTMLInputElement>, item: string) => {
         switch (item) {
             case 'EMAIL ADDRESS':
                 setUserData({ ...userData, email: e.target.value });
@@ -24,14 +24,14 @@ const LoginInput = () => {
     };
 
     const { data } = useGetUsersQuery(userData.email);
-    console.log(data);
 
     const LoginIn = () => {
         try {
             if (data[0].email === userData.email && data[0].password === userData.password) {
-                setIsLogin(true);
                 router.push('/');
-                setAuth({ isAuth: true, user: data[0].firstName, id: data[0].id });
+                const authData = { isAuth: true, user: data[0].firstName, id: data[0].id };
+                setAuth(authData);
+                localStorage.setItem('userIsLogin', JSON.stringify(authData));
             } else {
                 throw new Error('passwors is inccoorect');
             }

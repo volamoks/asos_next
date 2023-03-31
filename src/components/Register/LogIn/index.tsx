@@ -4,11 +4,6 @@ import LoginBtns from '../SignUp/Ui/LoginButtons';
 import LoginInput from './LoginInput';
 
 const Login = () => {
-    const { data } = useGetUsersQuery('123');
-
-    console.log(data);
-
-    const handleSubmint = () => {};
     const element = (
         <div className="w-screen h-screen bg-gray-200 flex justify-center pt-[100px]">
             <div className="flex flex-col  w-[700px] bg-white h-[700px] p-12">

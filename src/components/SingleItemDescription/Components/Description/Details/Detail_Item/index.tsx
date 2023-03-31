@@ -31,9 +31,9 @@ const Details_item: FC<Info> = ({ info, title }) => {
                     />
                 </span>
             </div>
-            <div className=" border-t-gray-100 border-b-2">
+            <div className=" border-t-gray-100 border-b-2 py-2">
                 <div
-                    className={` flex transition-all duration-300 + ${
+                    className={`flex  transition-all duration-300 + ${
                         isActive ? '  h-16 visible  ' : '  h-0  invisible   '
                     }`}
                 >
@@ -44,7 +44,7 @@ const Details_item: FC<Info> = ({ info, title }) => {
         </>
     );
 
-    return <div className="flex flex-col ">{detail}</div>;
+    return <div className="flex flex-col">{detail}</div>;
 };
 
 export default Details_item;

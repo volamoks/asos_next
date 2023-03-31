@@ -21,7 +21,7 @@ const HoverRow: FC = () => {
     if (!data) return <div />;
 
     const listRow = (
-        <ul className="flex  flex-between alighn-center h-full  ">
+        <ul className="hidden xl:flex  flex-between alighn-center h-full  ">
             {data.navigation[num].children[4].children.map(
                 (item, i) =>
                     !item.channelExclusions.includes('webLarge') && (

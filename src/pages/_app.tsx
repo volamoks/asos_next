@@ -4,6 +4,8 @@ import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 import { Jost } from '@next/font/google';
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistor } from '@/services/store/store';
 
 const jost = Jost({
     subsets: ['latin'],
@@ -14,9 +16,14 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <main className={jost.className}>
             <Provider store={store}>
-                <LayoutWrapper>
-                    <Component {...pageProps} />
-                </LayoutWrapper>
+                <PersistGate
+                    loading={null}
+                    persistor={persistor}
+                >
+                    <LayoutWrapper>
+                        <Component {...pageProps} />
+                    </LayoutWrapper>
+                </PersistGate>
             </Provider>
         </main>
     );
