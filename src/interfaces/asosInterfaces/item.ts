@@ -1,32 +1,32 @@
 export interface IItem {
     id: number;
     name: string;
-    description: string;
-    alternateNames: AlternateName[];
-    localisedData: LocalisedDaum[];
-    gender: string;
-    productCode: number;
-    pdpLayout: string;
-    brand: Brand;
-    sizeGuide: any;
-    sizeGuideApiUrl: any;
-    isNoSize: boolean;
-    isOneSize: boolean;
-    isInStock: boolean;
-    countryOfManufacture: any;
-    hasVariantsWithProp65Risk: boolean;
-    webCategories: WebCategory[];
-    variants: Variant[];
-    media: Media;
-    badges: any[];
-    info: Info;
-    shippingRestriction: any;
+    description?: string;
+    alternateNames?: AlternateName[];
+    localisedData?: LocalisedDaum[];
+    gender?: string;
+
+    pdpLayout?: string;
+    brand?: Brand;
+    sizeGuide?: any;
+    sizeGuideApiUrl?: any;
+    isNoSize?: boolean;
+    isOneSize?: boolean;
+    isInStock?: boolean;
+    countryOfManufacture?: any;
+    hasVariantsWithProp65Risk?: boolean;
+    webCategories?: WebCategory[];
+    variants?: Variant[];
+    media?: Media;
+    badges?: any[];
+    info?: Info;
+    shippingRestriction?: any;
     price: Price2;
-    isDeadProduct: boolean;
-    rating: any;
-    productType: ProductType;
-    plpIds: PlpId[];
-    baseUrl: string;
+    isDeadProduct?: boolean;
+    rating?: any;
+    productType?: ProductType;
+    plpIds?: PlpId[];
+    baseUrl?: string;
 }
 
 export interface AlternateName {

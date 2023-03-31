@@ -7,10 +7,11 @@ import Price from './Price';
 import SizeComponent from './Sizes';
 
 import { IItemPageProps } from '../../Interfaces';
-import ViewAll from '@/components/Cart/components/ItemsInCartInfo/ViewAll/ViewAll';
 
 const Description: FC<IItemPageProps> = ({ item }) => {
-    const [size, setSize] = useState(item?.variants[0].displaySizeText);
+    if (!item.variants) return <div />;
+
+    const [size, setSize] = useState(item.variants[0].displaySizeText);
 
     const addToCart = (
         <div className="flex ">

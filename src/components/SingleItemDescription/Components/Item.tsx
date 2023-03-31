@@ -14,7 +14,7 @@ const Item: FC = () => {
 
     if (isLoading) return <Spinner />;
 
-    if (!singleItem) return <div />;
+    if (!singleItem || !singleItem.media) return <div />;
 
     return (
         <div className=" min-h-[calc(100vh-400px-50px)]">

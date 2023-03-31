@@ -1,3 +1,5 @@
+import { Price2 } from "./item";
+
 export interface IItems {
     searchTerm: string;
     categoryName: string;
@@ -15,7 +17,7 @@ export interface IItems {
 export interface Product {
     id: number;
     name: string;
-    price: Price;
+    price: Price2;
     colour?: string;
     colourWayId?: number;
     brandName?: string;

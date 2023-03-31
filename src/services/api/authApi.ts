@@ -1,6 +1,4 @@
-import { IItem } from '@/interfaces/asosInterfaces/item';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { TYPEs_OF_SET_ITEMS } from '../helpers/setItemsOfUser';
 
 export const authApi = createApi({
     reducerPath: 'authApi',

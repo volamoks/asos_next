@@ -23,11 +23,9 @@ const SizeAndQty: FC<IItemsInCartProps> = ({ item }) => {
     };
 
     const { changeSizeAndQuantity } = useActions();
-
+    if (!item.variants) return <div />;
     const colorElem = (
-        <div className="w-1/4">
-            <span>{item.variants[0]?.colour}</span>
-        </div>
+        <div className="w-1/4">{item.variants && <span>{item.variants[0]?.colour}</span>}</div>
     );
 
     const sizeElem = (
