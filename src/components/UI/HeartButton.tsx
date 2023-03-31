@@ -2,6 +2,7 @@ import { useActions } from '@/hooks/combineActions';
 import { useAppSelector } from '@/hooks/typedHooks';
 import { IItem } from '@/interfaces/asosInterfaces/item';
 import { Product } from '@/interfaces/asosInterfaces/Items';
+import { TYPES_REDUCER_ACTIONS } from '@/services/reducers/asosReducer';
 
 import React, { FC, useEffect } from 'react';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
@@ -19,7 +20,7 @@ const HeartButton: FC<heartBtnProps> = ({ size = '25px', item }) => {
     const isActive = inFav.findIndex(product => product.id === item.id) >= 0 ? true : false;
 
     useEffect(() => {
-        setToLocalStorage('inFav', inFav);
+        setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_FAV, inFav);
     }, [inFav]);
 
     const handleAddToFav = (e: React.MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
