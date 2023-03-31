@@ -19,7 +19,7 @@ export interface IModalListHeadersProps {
 export interface IModalContainsProps {
     item: Children4[] | Children2[];
     type: string | undefined;
-    hadleGotoPage: (id: number) => void;
+    hadleGotoPage: (id: number | undefined) => void;
 }
 
 export enum TYPES {
