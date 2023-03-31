@@ -5,7 +5,7 @@ export interface IItem {
     alternateNames: AlternateName[];
     localisedData: LocalisedDaum[];
     gender: string;
-    productCode: string;
+    productCode: number;
     pdpLayout: string;
     brand: Brand;
     sizeGuide: any;

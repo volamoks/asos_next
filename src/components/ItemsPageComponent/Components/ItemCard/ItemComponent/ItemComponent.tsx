@@ -7,6 +7,7 @@ import HeartButton from '../../../../UI/HeartButton';
 import PriceComponent from '../../UI/PriceComponent';
 import DiscountLabel from '../../UI/DiscountLabel';
 import SellingFastLabel from '../../UI/SelingFastLabel';
+import { IItem } from '@/interfaces/asosInterfaces/item';
 
 interface IitemsProps {
     item: Product;

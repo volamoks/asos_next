@@ -16,21 +16,21 @@ export interface Product {
     id: number;
     name: string;
     price: Price;
-    colour: string;
-    colourWayId: number;
-    brandName: string;
-    hasVariantColours: boolean;
-    hasMultiplePrices: boolean;
-    groupId: any;
-    productCode: number;
-    productType: string;
-    url: string;
-    imageUrl: string;
-    videoUrl: any;
-    isSellingFast: boolean;
-    sponsoredCampaignId: any;
-    facetGroupings: FacetGrouping[];
-    advertisement: any;
+    colour?: string;
+    colourWayId?: number;
+    brandName?: string;
+    hasVariantColours?: boolean;
+    hasMultiplePrices?: boolean;
+    groupId?: any;
+    productCode?: number;
+
+    url?: string;
+    imageUrl?: string;
+    videoUrl?: any;
+    isSellingFast?: boolean;
+    sponsoredCampaignId?: any;
+    facetGroupings?: FacetGrouping[];
+    advertisement?: any;
 }
 
 export interface Price {
