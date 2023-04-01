@@ -109,7 +109,7 @@ const SideBar: FC<ISideBarProps> = ({
     return (
         <>
             <div
-                onClick={handleOpenSideBar}
+                onClick={handleCloseSideBar}
                 className={`fixed inset-0 bg-black/80 z-50 ${
                     isSideBar ? '' : 'pointer-events-none'
                 }`}
