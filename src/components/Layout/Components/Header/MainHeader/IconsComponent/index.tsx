@@ -133,7 +133,7 @@ const IconsComponent: FC<IsearchInput> = ({ setOpen, value, setClose, handleChan
     return (
         <div
             className={`flex  gap-4 justify-end my-auto z-10 mr-2 ${
-                isAccountModal ? 'mr-0' : 'mr-4'
+                isAccountModal ? 'mr-2' : 'mr-2'
             }`}
         >
             {searchIcon}

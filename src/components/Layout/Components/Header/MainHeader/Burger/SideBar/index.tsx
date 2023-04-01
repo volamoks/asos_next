@@ -73,7 +73,7 @@ const SideBar: FC<ISideBarProps> = ({
 
     const circleList = (
         <div>
-            {data?.navigation[0].children[4].children[categoryIndex].children.map(item => (
+            {data?.navigation[index].children[4].children[categoryIndex].children.map(item => (
                 <div
                     className=""
                     key={item.id}

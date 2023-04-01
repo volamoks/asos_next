@@ -12,6 +12,8 @@ const SearcModal: FC<ISearcModalProps> = ({ isModalOpen, data, setClose }) => {
         router.push(`/items/`);
     };
 
+    console.log(data);
+
     const modal = isModalOpen ? (
         <div className="z-20 relative ">
             <div className="bg-gray-200 -top-16 xl:bg-white w-full  absolute xl:-top-6 z-10 p-4 pt-24 xl:p-6 h-screen">
