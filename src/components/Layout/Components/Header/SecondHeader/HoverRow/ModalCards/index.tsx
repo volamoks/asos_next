@@ -1,8 +1,7 @@
 import { FC } from 'react';
+import { IModalListHeadersProps } from '../../../interfaces';
 
 import ModalContains from './ModalContains';
-
-import { IModalListHeadersProps } from '@/components/Header/interfaces';
 
 const ModalListHeaders: FC<IModalListHeadersProps> = ({ items }) => {
     const modalRowItems = (

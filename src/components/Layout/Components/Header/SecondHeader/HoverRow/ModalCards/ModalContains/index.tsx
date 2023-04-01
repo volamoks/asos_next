@@ -8,8 +8,7 @@ import TwoCards from './TwoCards';
 import CircleList from './CircleList';
 import ThreeCards from './ThreeCards';
 import List from './List';
-
-import { IModalBlockProps } from '@/components/Header/interfaces';
+import { IModalBlockProps } from '../../../../interfaces';
 
 const ModalContains: FC<IModalBlockProps> = ({ item, type }) => {
     const router = useRouter();
