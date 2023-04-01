@@ -1,5 +1,7 @@
+import { setToLocalStorage } from '@/components/Cart/utilities/localStorage';
 import { useActions } from '@/hooks/combineActions';
 import { useGetUsersQuery } from '@/services/api/authApi';
+import { TYPES_REDUCER_ACTIONS } from '@/services/reducers/asosReducer';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 
@@ -31,7 +33,7 @@ const LoginInput = () => {
                 router.push('/');
                 const authData = { isAuth: true, user: data[0].firstName, id: data[0].id };
                 setAuth(authData);
-                localStorage.setItem('userIsLogin', JSON.stringify(authData));
+                // setToLocalStorage(TYPES_REDUCER_ACTIONS.LOGGED_USER, authData);
             } else {
                 throw new Error('passwors is inccoorect');
             }

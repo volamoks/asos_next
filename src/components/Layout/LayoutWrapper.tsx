@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import Footer from '../Footer';
-import Header from '../Header';
+import Footer from './Components/Footer';
+import Header from './Components/Header';
 
 interface ILayoutWrapper {
     children: React.ReactElement;

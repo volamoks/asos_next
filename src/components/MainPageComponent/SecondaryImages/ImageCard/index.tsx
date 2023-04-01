@@ -13,8 +13,6 @@ interface IMainCardProps {
 const MainCardComp: FC<IMainCardProps> = ({ item, isBrandNameShown = true, width, height }) => {
     const router = useRouter();
 
-    console.log(item);
-
     if (!item) return <div />;
 
     const title = isBrandNameShown ? (

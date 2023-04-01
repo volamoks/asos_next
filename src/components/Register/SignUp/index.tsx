@@ -1,5 +1,4 @@
 import { useCreateUserMutation } from '@/services/api/authApi';
-import { useRouter } from 'next/router';
 import { FC, useState } from 'react';
 import LoginBtns from './Ui/LoginButtons';
 // import DateOfBirth from './SignUp/dateOfBirth';
@@ -14,8 +13,6 @@ const Register: FC = () => {
         lastName: '',
         password: '',
     });
-
-    const router = useRouter();
 
     const handleInput = (e: React.ChangeEvent<HTMLInputElement>, name: string) => {
         switch (name) {
@@ -36,8 +33,6 @@ const Register: FC = () => {
     };
 
     const [createUser, { data }] = useCreateUserMutation();
-
-    console.log(data);
 
     const handleSubmint = () => {
         const userData = { ...user };

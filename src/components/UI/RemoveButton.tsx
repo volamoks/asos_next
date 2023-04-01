@@ -15,10 +15,11 @@ const RemoveButton: FC<IRemoveButtonProps> = ({ item }) => {
     const { inBag } = useAppSelector(state => state.asos);
 
     useEffect(() => {
-        setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_CART, inBag);
+        // setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_CART, inBag);
     }, [inBag]);
 
     const handleAddToBag = (product: IItemIncart) => {
+        // setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_CART, inBag);
         addToBag(product);
     };
 

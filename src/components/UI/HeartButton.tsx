@@ -19,14 +19,15 @@ const HeartButton: FC<heartBtnProps> = ({ size = '25px', item }) => {
 
     const isActive = inFav.findIndex(product => product.id === item.id) >= 0 ? true : false;
 
-    useEffect(() => {
-        setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_FAV, inFav);
-    }, [inFav]);
-
     const handleAddToFav = (e: React.MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
         e.stopPropagation();
         addToFav(item);
+        // setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_FAV, inFav);
     };
+
+    // useEffect(() => {
+    //     inFav.length > 0 && setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_FAV, inFav);
+    // }, [inFav]);
 
     const element = !isActive ? (
         <AiOutlineHeart

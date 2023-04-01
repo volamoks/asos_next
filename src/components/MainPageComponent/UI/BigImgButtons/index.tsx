@@ -6,7 +6,7 @@ const BigImgButtons = () => {
 
     const btnArr = [
         { id: 1, title: 'New In' },
-        { id: 1, title: 'Shop Asos' },
+        { id: 2, title: 'Shop Asos' },
     ];
 
     const btn = (

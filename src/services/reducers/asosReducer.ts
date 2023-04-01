@@ -8,6 +8,7 @@ export enum TYPES_REDUCER_ACTIONS {
     IN_CART = 'inCart',
     IN_FAV = 'inFav',
     LOGGED_USER = 'userIsLogin',
+    STORE_GEN = 'storeGen',
 }
 
 export interface ILoggedUser {
@@ -23,17 +24,25 @@ export interface IInitialstate {
     loggedUser: ILoggedUser;
 }
 
-const inBaginLS = getLocatStorage(TYPES_REDUCER_ACTIONS.IN_CART);
-const infavinLS = getLocatStorage(TYPES_REDUCER_ACTIONS.IN_CART);
-const loggedUser = getLocatStorage(TYPES_REDUCER_ACTIONS.LOGGED_USER);
-const store = typeof localStorage !== 'undefined' && localStorage.getItem('storeGen');
+// const inBaginLS = getLocatStorage(TYPES_REDUCER_ACTIONS.IN_CART);
+// const infavinLS = getLocatStorage(TYPES_REDUCER_ACTIONS.IN_CART);
+// const loggedUser = getLocatStorage(TYPES_REDUCER_ACTIONS.LOGGED_USER);
+// const store =
+//     typeof localStorage !== 'undefined' && getLocatStorage(TYPES_REDUCER_ACTIONS.STORE_GEN);
 
+// const initialState: IInitialstate = {
+//     storeGen: store || 'WOMEN',
+//     inBag: inBaginLS || [],
+//     inFav: infavinLS || [],
+//     filters: [],
+//     loggedUser: loggedUser || { isAuth: false, user: null, id: null },
+// };
 const initialState: IInitialstate = {
-    storeGen: store || 'WOMEN',
-    inBag: inBaginLS || [],
-    inFav: infavinLS || [],
+    storeGen: 'WOMEN',
+    inBag: [],
+    inFav: [],
     filters: [],
-    loggedUser: loggedUser || { isAuth: false, user: null, id: null },
+    loggedUser: { isAuth: false, user: null, id: null },
 };
 
 export const asosSlice = createSlice({
@@ -42,19 +51,15 @@ export const asosSlice = createSlice({
     reducers: {
         setstoreGen: (state, action) => {
             state.storeGen = action.payload;
-            localStorage.setItem('storeGen', JSON.stringify(action.payload));
+            setToLocalStorage(TYPES_REDUCER_ACTIONS.STORE_GEN, action.payload);
         },
         addToBag: (state, action: PayloadAction<IItemIncart>) => {
             const index = state.inBag.findIndex(item => item.id === action.payload.id);
             index >= 0 ? state.inBag.splice(index, 1) : state.inBag.push(action.payload);
-
-            // setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_CART, state.inBag);
         },
         addToFav: (state, action: PayloadAction<Product | IItem>) => {
             const index = state.inFav.findIndex(item => item.id === action.payload.id);
             index >= 0 ? state.inFav.splice(index, 1) : state.inFav.push(action.payload);
-
-            // setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_FAV, state.inFav);
         },
         setFilter: (state, action: PayloadAction<string>) => {
             state.filters.includes(action.payload)
@@ -74,12 +79,10 @@ export const asosSlice = createSlice({
                 state.inBag[index].size = action.payload?.size;
                 state.inBag[index].quantity = action.payload?.quantity;
             }
-            // setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_CART, state.inBag);
         },
 
         setAuth: (state, action: PayloadAction<ILoggedUser>) => {
             state.loggedUser = action.payload;
-            // setToLocalStorage(TYPES_REDUCER_ACTIONS.LOGGED_USER, state.loggedUser);
         },
     },
 });

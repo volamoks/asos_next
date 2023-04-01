@@ -6,8 +6,6 @@ const LoginBtns = () => {
 
     const isLogin = router.route === '/login';
 
-    console.log(isLogin);
-
     const handleGoTo = (url: string) => {
         router.push(url);
     };

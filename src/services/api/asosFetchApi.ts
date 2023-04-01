@@ -4,6 +4,7 @@ import { IItems } from '@/interfaces/asosInterfaces/Items';
 import { ISearch } from '@/interfaces/asosInterfaces/search';
 import { ISimularItems } from '@/interfaces/asosInterfaces/simularItems';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { REHYDRATE } from 'redux-persist';
 
 export const asosApi = createApi({
     reducerPath: 'asosApi',
@@ -14,6 +15,11 @@ export const asosApi = createApi({
             headers.set('X-RapidAPI-Host', 'asos2.p.rapidapi.com');
         },
     }),
+    extractRehydrationInfo(action, { reducerPath }) {
+        if (action.type === REHYDRATE) {
+            return action.payload[reducerPath];
+        }
+    },
     endpoints: builder => ({
         getItems: builder.query<IItems, string | string[] | undefined>({
             query: id => ({
