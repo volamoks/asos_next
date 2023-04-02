@@ -5,19 +5,18 @@ const loginDBurl = process.env.DB_LINK;
 
 export const authApi = createApi({
     reducerPath: 'authApi',
-    baseQuery: fetchBaseQuery({ baseUrl: loginDBurl }),
+    baseQuery: fetchBaseQuery({ baseUrl: '/api' }),
     endpoints: builder => ({
         createUser: builder.mutation({
             query: user => ({
-                url: '/users',
+                url: '/register',
                 method: 'POST',
                 body: user,
             }),
         }),
         getUsers: builder.query({
-            query: request => ({
-                url: '/users',
-                params: { email: request },
+            query: () => ({
+                url: '/current',
             }),
         }),
         setItems: builder.mutation({

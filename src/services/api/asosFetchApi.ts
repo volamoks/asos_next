@@ -15,11 +15,7 @@ export const asosApi = createApi({
             headers.set('X-RapidAPI-Host', 'asos2.p.rapidapi.com');
         },
     }),
-    extractRehydrationInfo(action, { reducerPath }) {
-        if (action.type === REHYDRATE) {
-            return action.payload[reducerPath];
-        }
-    },
+
     endpoints: builder => ({
         getItems: builder.query<IItems, string | string[] | undefined>({
             query: id => ({

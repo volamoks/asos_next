@@ -14,7 +14,7 @@ const SecondaryImg: FC<ISecondaryImgProps> = ({ data }) => {
     const index = storeGen === 'MEN' ? 0 : 1;
 
     const images = (
-        <div className="grid grid-cols-2 max-w-screen-xl xl:grid-cols-4  my-6 justify-between gap-2">
+        <div className="grid grid-cols-2 mx-auto max-w-screen-xl md:grid-cols-2 xl:grid-cols-4  my-6 justify-between gap-2">
             {data &&
                 data.navigation[index].children[4].children[0].children[2].children
                     .slice(2, 6)

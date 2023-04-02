@@ -13,8 +13,10 @@ export enum TYPES_REDUCER_ACTIONS {
 
 export interface ILoggedUser {
     isAuth: boolean;
-    user: null | string;
-    id: null | string;
+    firstName?: null | string;
+    lastName?: null | string;
+    email?: null | string;
+    id?: null | string;
 }
 export interface IInitialstate {
     storeGen: string;
@@ -22,6 +24,7 @@ export interface IInitialstate {
     inFav: Product[] | IItem[];
     filters: string[];
     loggedUser: ILoggedUser;
+    authPage: string;
 }
 
 // const inBaginLS = getLocatStorage(TYPES_REDUCER_ACTIONS.IN_CART);
@@ -42,7 +45,8 @@ const initialState: IInitialstate = {
     inBag: [],
     inFav: [],
     filters: [],
-    loggedUser: { isAuth: false, user: null, id: null },
+    loggedUser: { isAuth: false },
+    authPage: 'login',
 };
 
 export const asosSlice = createSlice({
@@ -83,6 +87,9 @@ export const asosSlice = createSlice({
 
         setAuth: (state, action: PayloadAction<ILoggedUser>) => {
             state.loggedUser = action.payload;
+        },
+        setAuthPage: (state, action: PayloadAction<string>) => {
+            state.authPage = action.payload;
         },
     },
 });

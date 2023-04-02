@@ -39,7 +39,7 @@ const Burger: FC = () => {
             </div>
         </>
     );
-    return <div className="md:hidden pt-1">{burger}</div>;
+    return <div className="xl:hidden pt-1">{burger}</div>;
 };
 
 export default Burger;

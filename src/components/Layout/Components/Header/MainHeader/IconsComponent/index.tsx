@@ -48,7 +48,7 @@ const IconsComponent: FC<IsearchInput> = ({ setOpen, value, setClose, handleChan
                 </button>
             </div>
             <div className="xl:flex absolute right-[180px] hidden">
-                <button onClick={handleOpenAccount}>
+                <button onClick={setOpen}>
                     <AiOutlineSearch
                         size="30px"
                         color="black"

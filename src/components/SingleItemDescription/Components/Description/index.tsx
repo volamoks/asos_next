@@ -23,7 +23,7 @@ const Description: FC<IItemPageProps> = ({ item }) => {
         </div>
     );
     return (
-        <div className="flex xl:w-1/4  mx-10 ">
+        <div className="flex xl:w-1/4  mx-auto p-4">
             <div className="flex flex-col ">
                 <Price item={item} />
 

@@ -12,12 +12,12 @@ const Logged: FC<ILoggedProps> = ({ userData }) => {
 
     const handleLogout = () => {
         // localStorage.removeItem('userIsLogin');
-        setAuth({ ...userData, isAuth: false });
+        setAuth({  isAuth: false });
     };
 
     const loggedAcc = (
         <>
-            <div className="font-bold text-xl">Hi {userData.user}</div>
+            <div className="font-bold text-xl">Hi {userData.firstName}</div>
             <div
                 onClick={handleLogout}
                 className="underline"

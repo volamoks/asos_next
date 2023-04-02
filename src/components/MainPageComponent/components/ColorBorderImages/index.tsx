@@ -14,7 +14,7 @@ const ColorBorderImages: FC<ISecondaryImgProps> = ({ data }) => {
 
     const index = storeGen === 'MEN' ? 0 : 1;
     const images = (
-        <div className="flex flex-col m-4 gap-2 xl:flex-row xl:m-24 w-full">
+        <div className="flex flex-col m-4 gap-2 md:flex-row xl:m-24 w-full">
             {data &&
                 data.navigation[index].children[4].children[0].children[2].children
                     .slice(7, 9)

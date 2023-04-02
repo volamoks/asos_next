@@ -16,7 +16,7 @@ const SearcModal: FC<ISearcModalProps> = ({ isModalOpen, data, setClose }) => {
 
     const modal = isModalOpen ? (
         <div className="z-20 relative ">
-            <div className="bg-gray-200 -top-16 xl:bg-white w-full  absolute xl:-top-6 z-10 p-4 pt-24 xl:p-6 h-screen">
+            <div className="bg-gray-200 -top-16 xl:bg-white w-full xl:w-[719px] absolute xl:-top-8 xl:h-[300px] xl:left-[470px] z-10 p-4 pt-24 xl:p-6 h-screen">
                 <div className="">
                     {data?.suggestionGroups[0].suggestions.map(item => (
                         <ul key={nanoid()}>
@@ -33,7 +33,7 @@ const SearcModal: FC<ISearcModalProps> = ({ isModalOpen, data, setClose }) => {
             </div>
             <div
                 onClick={setClose}
-                className="xl:bg-black/50 w-screen h-screen absolute -left-[600px]"
+                className="xl:bg-black/50 w-screen h-screen absolute -left-[600px] xl:left-0 -top-20 z-0"
             ></div>
         </div>
     ) : (

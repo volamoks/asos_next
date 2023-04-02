@@ -15,7 +15,7 @@ const Footer: FC = () => {
 
     const footerElement = (
         <>
-            <div className="hidden xl:flex justify-around max-w-screen-xl  mx-auto">
+            <div className="hidden md:flex justify-around max-w-screen-xl  h-[300px] mx-auto">
                 {data?.footer.map(item => (
                     <div key={item.id}>
                         <FooterList list={item} />
@@ -24,12 +24,12 @@ const Footer: FC = () => {
                 {shipping}
             </div>
 
-            <div className=" bg-gray-200 py-4 pl-[110px] w-full h-12 text-sm text-gray-500 text-start">
+            <div className=" bg-gray-200 py-4 pl-[110px] w-full h-[50px] text-sm text-gray-500 text-start">
                 ©2023
             </div>
         </>
     );
-    return <footer className=" bg-gray-100 min-h-12 w-full mx-auto">{footerElement}</footer>;
+    return <footer className=" bg-gray-300 min-h-12 w-full mx-auto">{footerElement}</footer>;
 };
 
 export default Footer;

@@ -1,3 +1,4 @@
+import { useActions } from '@/hooks/combineActions';
 import { useRouter } from 'next/router';
 import { FC } from 'react';
 
@@ -6,17 +7,19 @@ interface handleOpenAccount {
 }
 
 const CreateAccount: FC<handleOpenAccount> = ({ handleOpenAccount }) => {
+    const { setAuthPage } = useActions();
     const router = useRouter();
 
     const hangleGoTo = (url: string) => {
         handleOpenAccount();
-        router.push(url);
+        router.push('/auth');
+        setAuthPage(url);
     };
     const create = (
         <>
             <div>
                 <button
-                    onClick={() => hangleGoTo('/login')}
+                    onClick={() => hangleGoTo('login')}
                     className="underline"
                 >
                     Log In
@@ -24,7 +27,7 @@ const CreateAccount: FC<handleOpenAccount> = ({ handleOpenAccount }) => {
             </div>
             <div>
                 <button
-                    onClick={() => hangleGoTo('/register')}
+                    onClick={() => hangleGoTo('register')}
                     className="underline"
                 >
                     Sign Up

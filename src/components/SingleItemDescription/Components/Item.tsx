@@ -17,9 +17,9 @@ const Item: FC = () => {
     if (!singleItem || !singleItem.media) return <div />;
 
     return (
-        <div className=" min-h-[calc(100vh-400px-50px)]">
+        <div className=" md:min-h-[calc(100vh-390px)] xl:min-h-[calc(100vh-400px)]">
             {isLoading && <Spinner />}
-            <div className="flex flex-col  xl:flex-row xl:mt-10 justify-center max-w-screen-xl mx-auto">
+            <div className="flex flex-col  md:flex-row md:mt-10 justify-center max-w-screen-xl mx-auto md:gap-4 md:p-4">
                 <ItemPicComponent data={singleItem.media} />
                 <Description item={singleItem} />
             </div>

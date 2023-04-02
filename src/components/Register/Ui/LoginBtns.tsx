@@ -1,19 +1,18 @@
 import { useRouter } from 'next/router';
-import React from 'react';
+import { FC } from 'react';
 
-const LoginBtns = () => {
+interface ILoginBtnsProps {
+    isLogin: boolean;
+    handleSetLogin: () => void;
+}
+
+const LoginBtns: FC<ILoginBtnsProps> = ({ isLogin, handleSetLogin }) => {
     const router = useRouter();
-
-    const isLogin = router.route === '/login';
-
-    const handleGoTo = (url: string) => {
-        router.push(url);
-    };
 
     const buttons = (
         <div className="flex justify-between h-[80px]">
             <button
-                onClick={() => handleGoTo('/login')}
+                onClick={handleSetLogin}
                 className={`w-1/2 uppercase  text-gray-400 border-r-2 border-b-2 ${
                     isLogin ? 'text-gray-700 font-bold hover:none border-r-2 border-gray-500' : ''
                 } `}
@@ -22,7 +21,7 @@ const LoginBtns = () => {
                 Log In
             </button>
             <button
-                onClick={() => handleGoTo('/register')}
+                onClick={handleSetLogin}
                 className={`w-1/2 uppercase   border-b-2  ${
                     !isLogin
                         ? 'text-gray-700 font-bold hover:none border-r-0 border-l-2 border-gray-500'
