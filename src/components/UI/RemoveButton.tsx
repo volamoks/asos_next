@@ -3,7 +3,7 @@ import { useAppSelector } from '@/hooks/typedHooks';
 import { TYPES_REDUCER_ACTIONS } from '@/services/reducers/asosReducer';
 import { FC, useEffect } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
-import { setToLocalStorage } from '../Cart/utilities/localStorage';
+
 import { IItemIncart } from './AddToCartButton';
 
 interface IRemoveButtonProps {
@@ -14,12 +14,9 @@ const RemoveButton: FC<IRemoveButtonProps> = ({ item }) => {
 
     const { inBag } = useAppSelector(state => state.asos);
 
-    useEffect(() => {
-        // setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_CART, inBag);
-    }, [inBag]);
+    useEffect(() => {}, [inBag]);
 
     const handleAddToBag = (product: IItemIncart) => {
-        // setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_CART, inBag);
         addToBag(product);
     };
 

@@ -5,8 +5,9 @@ import Link from 'next/link';
 
 import { BsBag } from 'react-icons/bs';
 
-const EmptyBag = () => {
+export const EmptyBag = () => {
     const router = useRouter();
+
     return (
         <div className=" bg-gray-200">
             <div className="flex flex-col max-w-screen-lg mx-auto xl:h-[calc(100vh-400px-50px)]  h-screen justify-center ">
@@ -21,12 +22,14 @@ const EmptyBag = () => {
                         Saved Items.
                     </h3>
                 </span>
-                <button
-                    onClick={() => router.push('/favorites')}
-                    className="bg-green-700 uppercase p-3 text-white font-bold w-2/5 xl:w-1/5 self-center mt-6"
-                >
-                    view saved items
-                </button>
+                {router.pathname === '/cart' && (
+                    <button
+                        onClick={() => router.push('/favorites')}
+                        className="bg-green-700 uppercase p-3 text-white font-bold w-2/5 xl:w-1/5 self-center mt-6"
+                    >
+                        view saved items
+                    </button>
+                )}
                 <Link
                     href="/"
                     className="text-center underline mt-4"
@@ -38,4 +41,3 @@ const EmptyBag = () => {
     );
 };
 
-export default EmptyBag;

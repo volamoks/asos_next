@@ -9,9 +9,12 @@ import SizeComponent from './Sizes';
 import { IItemPageProps } from '../../Interfaces';
 
 const Description: FC<IItemPageProps> = ({ item }) => {
-    if (!item.variants) return <div />;
+    // if (!item.variants) return <div />;
+    const [size, setSize] = useState('');
 
-    const [size, setSize] = useState(item.variants[0].displaySizeText);
+    if (!item.variants) return <div></div>;
+
+    setSize(item.variants[0].displaySizeText);
 
     const addToCart = (
         <div className="flex ">

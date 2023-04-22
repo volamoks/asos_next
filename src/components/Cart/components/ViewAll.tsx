@@ -1,8 +1,7 @@
 import { FC } from 'react';
-
 import { useRouter } from 'next/router';
 
-const ViewAll: FC = () => {
+export const ViewAllSavedItemsCard: FC = () => {
     const router = useRouter();
 
     const viewAll = (
@@ -16,14 +15,12 @@ const ViewAll: FC = () => {
 
             <button
                 onClick={() => router.push('/favorites')}
-                className="mt-7 uppercase font-bold self-start px-8 py-4 border-2 border-gray-400 "
+                className="mt-7 uppercase font-bold xl:self-start px-8 py-4 border-2 border-gray-400 "
             >
                 view all saved Items
             </button>
         </>
     );
 
-    return <div className="flex flex-col mt-5  justify-start p-2">{viewAll}</div>;
+    return <div className="flex flex-col mt-5  item-middle xl:justify-start p-2">{viewAll}</div>;
 };
-
-export default ViewAll;

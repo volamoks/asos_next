@@ -3,7 +3,7 @@ import { FC } from 'react';
 import MainHeader from './MainHeader';
 import SecondHeader from './SecondHeader';
 
-const Header: FC = () => {
+export const Header: FC = () => {
     return (
         <header className="relative ">
             <div className="bg-[#2d2d2d] h-[60px]   ">

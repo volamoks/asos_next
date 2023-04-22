@@ -4,7 +4,11 @@ import { IItems } from '@/interfaces/asosInterfaces/Items';
 import { ISearch } from '@/interfaces/asosInterfaces/search';
 import { ISimularItems } from '@/interfaces/asosInterfaces/simularItems';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { REHYDRATE } from 'redux-persist';
+
+interface IGetItemsProps {
+    id: string | string[] | undefined;
+    cardsOnPage?: number;
+}
 
 export const asosApi = createApi({
     reducerPath: 'asosApi',
@@ -17,14 +21,14 @@ export const asosApi = createApi({
     }),
 
     endpoints: builder => ({
-        getItems: builder.query<IItems, string | string[] | undefined>({
-            query: id => ({
+        getItems: builder.query<IItems, IGetItemsProps>({
+            query: ({ id, cardsOnPage = 24 }) => ({
                 url: '/products/v2/list',
                 params: {
                     store: 'US',
                     offset: '0',
                     categoryId: id,
-                    limit: '48',
+                    limit: cardsOnPage,
                     country: 'US',
                     sort: 'freshness',
                     currency: 'USD',
@@ -34,7 +38,7 @@ export const asosApi = createApi({
             }),
         }),
 
-        getItem: builder.query<IItem, string | string[] | undefined>({
+        getItem: builder.query<IItem, IGetItemsProps>({
             query: id => ({
                 url: '/products/v3/detail',
                 params: {
@@ -47,13 +51,13 @@ export const asosApi = createApi({
             }),
         }),
 
-        getcategory: builder.query<ICategory, string>({
+        getCategory: builder.query<ICategory, string>({
             query: () => ({
                 url: '/categories/list',
                 params: { country: 'US', lang: 'en-US' },
             }),
         }),
-        getSimularItems: builder.query<ISimularItems, string | string[] | undefined>({
+        getSimularItems: builder.query<ISimularItems, IGetItemsProps>({
             query: id => ({
                 url: 'https://asos2.p.rapidapi.com/products/v3/list-similarities',
                 params: {
@@ -65,7 +69,7 @@ export const asosApi = createApi({
                 },
             }),
         }),
-        getSeacrhItems: builder.query<ISearch, string | string[] | undefined>({
+        getSearchItems: builder.query<ISearch, string | string[] | undefined>({
             query: request => ({
                 url: 'https://asos2.p.rapidapi.com/v2/auto-complete',
                 params: {
@@ -82,9 +86,9 @@ export const asosApi = createApi({
 });
 
 export const {
-    useGetcategoryQuery,
+    useGetCategoryQuery,
     useGetItemsQuery,
     useGetItemQuery,
     useGetSimularItemsQuery,
-    useGetSeacrhItemsQuery,
+    useGetSearchItemsQuery,
 } = asosApi;

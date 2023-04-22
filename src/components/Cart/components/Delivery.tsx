@@ -1,8 +1,6 @@
-import React from 'react';
-
 import { BsTruck } from 'react-icons/bs';
 
-const Delivery = () => {
+export const DeliveryCard = () => {
     const delivery = (
         <div className="flex mt-5 bg-white">
             <div className="flex w-1/6">
@@ -12,9 +10,7 @@ const Delivery = () => {
                 <span className="font-bold uppercase my-1">
                     Free standart Delivery over 100 USD
                 </span>
-
                 <span>Faster delivery options available to most countries.</span>
-
                 <a
                     className="underline my-1"
                     href="#"
@@ -26,5 +22,3 @@ const Delivery = () => {
     );
     return <>{delivery}</>;
 };
-
-export default Delivery;

@@ -8,19 +8,20 @@ interface ISelectComponent {
     selectOptions: Facet;
     setValue: ActionCreatorWithPayload<string, 'asos/setFilter'>;
     value?: string | undefined;
-    defaultValue: string;
+    categoryName: string;
 }
 
 const SelectComponent: FC<ISelectComponent> = ({
     selectOptions,
     setValue,
     value,
-    defaultValue,
+    categoryName,
 }) => {
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setValue(e.currentTarget.value);
     };
 
+    console.log('render');
     const options = selectOptions.facetValues.map((item, i) => (
         <option
             key={item.id}
@@ -32,15 +33,22 @@ const SelectComponent: FC<ISelectComponent> = ({
     ));
 
     return (
-        <select
-            key={selectOptions.id}
-            className="my-2 border-y-2  bg-transparent mx-4 w-full h-10 "
-            value={value}
-            defaultValue={defaultValue}
-            onChange={handleChange}
-        >
-            {options}
-        </select>
+        <>
+            <select
+                key={selectOptions.id}
+                className=" border-y-2  bg-transparent px-4 w-full h-10 "
+                value={value}
+                onChange={handleChange}
+            >
+                <option
+                    disabled
+                    selected
+                >
+                    {categoryName}
+                </option>
+                {options}
+            </select>
+        </>
     );
 };
 

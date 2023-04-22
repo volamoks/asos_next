@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import Footer from './Components/Footer';
+import { Footer } from './Components/Footer';
 import Header from './Components/Header';
 
 interface ILayoutWrapper {
@@ -9,12 +9,12 @@ interface ILayoutWrapper {
 
 const LayoutWrapper: FC<ILayoutWrapper> = ({ children }) => {
     return (
-        <>
+        <div className="min-h-screen">
             <Header />
 
             {children}
             <Footer />
-        </>
+        </div>
     );
 };
 

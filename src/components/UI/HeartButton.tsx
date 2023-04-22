@@ -6,7 +6,6 @@ import { TYPES_REDUCER_ACTIONS } from '@/services/reducers/asosReducer';
 
 import React, { FC, useEffect } from 'react';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
-import { setToLocalStorage } from '../Cart/utilities/localStorage';
 
 interface heartBtnProps {
     size?: string;
@@ -22,12 +21,7 @@ const HeartButton: FC<heartBtnProps> = ({ size = '25px', item }) => {
     const handleAddToFav = (e: React.MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
         e.stopPropagation();
         addToFav(item);
-        // setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_FAV, inFav);
     };
-
-    // useEffect(() => {
-    //     inFav.length > 0 && setToLocalStorage(TYPES_REDUCER_ACTIONS.IN_FAV, inFav);
-    // }, [inFav]);
 
     const element = !isActive ? (
         <AiOutlineHeart
@@ -44,7 +38,7 @@ const HeartButton: FC<heartBtnProps> = ({ size = '25px', item }) => {
     return (
         <button
             onClick={e => handleAddToFav(e)}
-            className=" rounded-3xl h-10 w-10 bg-gray-300/80 self-center ml-5 flex align-center z-50"
+            className=" rounded-3xl h-10 w-10 bg-gray-300/80 self-center ml-5 flex align-center z-10"
         >
             {element}
         </button>

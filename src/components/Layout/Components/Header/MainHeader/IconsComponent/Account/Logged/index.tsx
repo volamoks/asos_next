@@ -11,8 +11,7 @@ const Logged: FC<ILoggedProps> = ({ userData }) => {
     const { setAuth } = useActions();
 
     const handleLogout = () => {
-        // localStorage.removeItem('userIsLogin');
-        setAuth({  isAuth: false });
+        setAuth({ isAuth: false });
     };
 
     const loggedAcc = (

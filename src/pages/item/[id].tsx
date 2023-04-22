@@ -1,9 +1,7 @@
-import Item from '@/components/SingleItemDescription/Components/Item';
-
-import React from 'react';
+import { ItemPage } from '@/components/SingleItemDescription';
 
 const item = () => {
-    return <Item />;
+    return <ItemPage />;
 };
 
 export default item;

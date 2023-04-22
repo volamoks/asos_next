@@ -4,14 +4,14 @@ import InputForm from '../Ui/InputForm';
 export interface IInputProps {
     handleInput: (e: React.ChangeEvent<HTMLInputElement>, name: string) => void;
 }
+const inputsData = [
+    { id: 1, label: 'email', type: 'email', name: 'EMAIL ADDRESS', required: true },
+    { id: 2, label: 'firstName', type: 'text', name: 'FIRST NAME', required: false },
+    { id: 3, label: 'lastName', type: 'text', name: 'LAST NAME', required: false },
+    { id: 4, label: 'password', type: 'password', name: 'PASSWORD', required: true },
+];
 
 const Input: FC<IInputProps> = ({ handleInput }) => {
-    const inputsData = [
-        { id: 1, label: 'email', type: 'email', name: 'EMAIL ADDRESS', required: true },
-        { id: 2, label: 'firstName', type: 'text', name: 'FIRST NAME', required: false },
-        { id: 3, label: 'lastName', type: 'text', name: 'LAST NAME', required: false },
-        { id: 4, label: 'password', type: 'password', name: 'PASSWORD', required: true },
-    ];
     const input = inputsData.map(item => (
         <div
             key={item.id}

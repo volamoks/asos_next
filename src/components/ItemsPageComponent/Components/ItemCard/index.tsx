@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import ItemComponent from './ItemComponent/ItemComponent';
+import { ItemComponent } from './ItemComponent/ItemComponent';
 
 import { IItems } from '@/interfaces/asosInterfaces/Items';
 

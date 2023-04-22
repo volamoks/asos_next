@@ -1,41 +1,47 @@
 import React, { FC } from 'react';
+import finalPropsSelectorFactory from 'react-redux/es/connect/selectorFactory';
 
-export interface IsearchInput {
-    setOpen: () => void;
+export interface ISearchInput {
+    setOrToggleModel: () => void;
     value: string;
-    isModalOpen: boolean;
-    setClose: () => void;
-
+    isSearchModalOpen: boolean;
     handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const SearchInput: FC<IsearchInput> = ({ setOpen, value, handleChange, isModalOpen, setClose }) => {
-    const form = isModalOpen && (
-        <>
+export const SearchInput: FC<ISearchInput> = ({
+    setOrToggleModel,
+    value,
+    handleChange,
+    isSearchModalOpen,
+}) => {
+    const form = () => (
+        <div className="w-full relative">
             <form action="input ">
                 <input
-                    onClick={setOpen}
+                    onClick={setOrToggleModel}
                     onChange={handleChange}
                     placeholder="   Search for items"
-                    className="  flex xl:flex rounded-3xl xl:w-max-screen-xl  w-full my-1 h-[45px] relative xl:border-2 pl-4"
+                    className={`${
+                        isSearchModalOpen ? ' flex' : 'hidden '
+                    }  flex xl:flex rounded-3xl xl:w-max-screen-xl  w-full my-1 h-[45px] relative xl:border-2 pl-4`}
                     type="search"
                     value={value}
                 />
             </form>
-            <button
-                className="absolute top-3 right-4"
-                onClick={setClose}
-            >
-                Close
-            </button>
-        </>
+        </div>
     );
 
     return (
-        <div className=" absolute top-10 left-0 xl:relative w-full xl:flex flex-col z-30">
-            {form}
+        <div className=" absolute top-10 xl:top-1 left-0 xl:relative w-full xl:flex flex-col z-30">
+            {form()}
+            {isSearchModalOpen && (
+                <button
+                    className=" xl:hidden absolute top-3 right-4"
+                    onClick={setOrToggleModel}
+                >
+                    Close
+                </button>
+            )}
         </div>
     );
 };
-
-export default SearchInput;

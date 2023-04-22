@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 
 import { useRouter } from 'next/router';
-import { useGetcategoryQuery } from '@/services/api/asosFetchApi';
+import { useGetCategoryQuery } from '@/services/api/asosFetchApi';
 
 import CircleList from '../../../SecondHeader/HoverRow/ModalCards/ModalContains/CircleList';
 import ThreeCards from '../../../SecondHeader/HoverRow/ModalCards/ModalContains/ThreeCards';
@@ -26,7 +26,7 @@ const SideBar: FC<ISideBarProps> = ({
     setIsSecondBar,
 }) => {
     const router = useRouter();
-    const { data } = useGetcategoryQuery('');
+    const { data } = useGetCategoryQuery('');
 
     const { storeGen } = useAppSelector(state => state.asos);
     const [categoryIndex, setCategoryIndex] = useState(0);

@@ -1,31 +1,29 @@
-import { useCreateUserMutation } from '@/services/api/authApi';
+import { useCreateUserMutation, useGetUsersQuery } from '@/services/api/authApi';
 import { FC, useCallback, useEffect, useState } from 'react';
-import LoginBtns from './Ui/LoginBtns';
-import LoginForm from './LogIn';
-import RegisterForm from './SignUp';
+import LoginForm from '@/components/Register/LogIn';
+import RegisterForm from '@/components/Register/SignUp';
 // import { nanoid } from '@reduxjs/toolkit';
 // import axios from 'axios';
-import GreyButton from './Ui/GreyButton';
-import LoginBtn from './Ui/LoginBtn';
-import { signIn } from 'next-auth/react';
+import GreyButton from '@/components/Register/Ui/GreyButton';
+import LoginBtn from '@/components/Register/Ui/LoginBtn';
+import { getSession, signIn } from 'next-auth/react';
 import router from 'next/router';
-import { useAppSelector } from '@/hooks/typedHooks';
+import { useActions } from '@/hooks/combineActions';
 
-const RegisterNew: FC = () => {
-    const { authPage } = useAppSelector(state => state.asos);
+export const Register: FC = () => {
+    const { data: userData } = useGetUsersQuery('');
 
-    const [isLogin, setIsLogin] = useState(authPage === 'login' ? true : false);
-
-    useEffect(() => {
-        setIsLogin(authPage === 'login' ? true : false);
-    }, [authPage]);
-
+    const [isLogin, setIsLogin] = useState(true);
     const [user, setUser] = useState({
         email: '',
         firstName: '',
         lastName: '',
         password: '',
     });
+
+    useEffect(() => {
+        userData && setAuth({ ...userData, isAuth: true });
+    }, [userData]);
 
     const handleSetLogin = () => {
         setIsLogin(!isLogin);
@@ -50,7 +48,9 @@ const RegisterNew: FC = () => {
         }
     };
 
-    const [createUser, { data }] = useCreateUserMutation();
+    const { setAuth } = useActions();
+
+    const [createUser] = useCreateUserMutation();
 
     const handleLoginIn = useCallback(async () => {
         try {
@@ -60,22 +60,15 @@ const RegisterNew: FC = () => {
                 redirect: false,
                 callbackUrl: '/',
             });
-
             router.push('/');
         } catch (error) {
             console.log(error);
         }
-    }, [user.email, user.password, router]);
+    }, [user.email, user.password]);
 
     const handleSubmit = () => {
         const userData = { ...user };
-        console.log(userData);
-        createUser(userData)
-            .unwrap()
-            .then(() => {})
-            .catch(error => {
-                console.log(error);
-            });
+        createUser(userData);
     };
 
     const activeFrom = isLogin ? (
@@ -85,14 +78,14 @@ const RegisterNew: FC = () => {
     );
 
     const loginOrRegister = (
-        <div className="flex justify-between h-[80px]">
+        <div className="flex justify-between h-[50px]">
             <LoginBtn
                 buttonName="log in"
                 isLogin={isLogin}
                 handleSetLogin={handleSetLogin}
             />
             <LoginBtn
-                buttonName="Register"
+                buttonName="Register "
                 isLogin={!isLogin}
                 handleSetLogin={handleSetLogin}
             />
@@ -112,10 +105,10 @@ const RegisterNew: FC = () => {
     );
 
     const element = (
-        <div className="w-screen h-[calc(100vh - 1rem)] bg-gray-200 flex justify-center pt-[100px]">
-            <div className="flex flex-col w-[700px] bg-white h-[1000px] xl:h-[500px] p-12">
+        <div className="w-screen h-[calc(100vh-100px)]  md:h-[calc(100vh-200px-100px)] xl:min-h-[calc(100vh-100px)] bg-gray-200 flex justify-center xl:pt-20 py-6">
+            <div className="flex flex-col  w-[700px] bg-white h-[670px] md:h-[700px] p-12">
                 {loginOrRegister}
-                <h2 className="text-xl text-black text-center uppercase font-bold m-2 xl:m-12">
+                <h2 className="xl:text-xl text-lg text-black text-center uppercase font-bold mt-8 mb-2 xl:m-12">
                     {isLogin ? 'Login with Email ' : `Sign up with Email`}
                 </h2>
                 {activeFrom}
@@ -125,5 +118,3 @@ const RegisterNew: FC = () => {
     );
     return <div>{element}</div>;
 };
-
-export default RegisterNew;

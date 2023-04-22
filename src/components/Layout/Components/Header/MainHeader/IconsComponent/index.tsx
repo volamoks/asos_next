@@ -8,26 +8,27 @@ import { useRouter } from 'next/router';
 import { useAppSelector } from '@/hooks/typedHooks';
 import AccountModal from './Account';
 
-import { IsearchInput } from '../Search';
+interface IIconsComponentProps {
+    toggleModal: () => void;
+    isModalOpen: boolean;
+    setOrToggleModel: () => void;
+}
 
-const IconsComponent: FC<IsearchInput> = ({ setOpen, value, setClose, handleChange }) => {
+export const IconsComponent: FC<IIconsComponentProps> = ({
+    isModalOpen,
+    toggleModal,
+
+    setOrToggleModel,
+}) => {
     const router = useRouter();
-    const { loggedUser } = useAppSelector(state => state.asos);
-    const { inBag } = useAppSelector(state => state.asos);
-    const { inFav } = useAppSelector(state => state.asos);
+    const { loggedUser, inBag, inFav } = useAppSelector(state => state.asos);
 
-    const [isAccountModal, setInAccountModal] = useState(false);
-
-    const hadleGoToPage = (link: string) => {
+    const handleGoToPage = (link: string) => {
         router.push(link);
     };
 
-    const handleOpenAccount = () => {
-        setInAccountModal(!isAccountModal);
-    };
-
     useEffect(() => {
-        if (isAccountModal) {
+        if (isModalOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'visible';
@@ -35,50 +36,41 @@ const IconsComponent: FC<IsearchInput> = ({ setOpen, value, setClose, handleChan
         return () => {
             document.body.style.overflow = 'visible';
         };
-    }, [isAccountModal]);
+    }, [isModalOpen]);
 
     const searchIcon = (
         <>
-            <div className=" xl:hidden ">
-                <button onClick={setOpen}>
-                    <AiOutlineSearch
-                        size="30px"
-                        color="white"
-                    />
-                </button>
-            </div>
-            <div className="xl:flex absolute right-[180px] hidden">
-                <button onClick={setOpen}>
-                    <AiOutlineSearch
-                        size="30px"
-                        color="black"
-                    />
-                </button>
-            </div>
+            <button
+                className=" xl:hidden "
+                onClick={setOrToggleModel}
+            >
+                <AiOutlineSearch
+                    size="30px"
+                    color="white"
+                />
+            </button>
         </>
     );
 
-    const bag = (
-        <div className=" ">
+    const bagIcon = (
+        <button onClick={() => handleGoToPage('/cart')}>
             {inBag.length > 0 ? (
                 <BsFillBagFill
-                    onClick={() => hadleGoToPage('/cart')}
                     size="30px"
                     color="white"
                 />
             ) : (
                 <BsBag
-                    onClick={() => hadleGoToPage('/cart')}
                     size="30px"
                     color="white"
                 />
             )}
-        </div>
+        </button>
     );
 
     const personIcon = (
-        <div className=" ">
-            <button onClick={handleOpenAccount}>
+        <>
+            <button onClick={toggleModal}>
                 {loggedUser.isAuth ? (
                     <IoPerson
                         size="30px"
@@ -91,58 +83,51 @@ const IconsComponent: FC<IsearchInput> = ({ setOpen, value, setClose, handleChan
                     />
                 )}
             </button>
-            <div>
+            <div className="absolute top-0 xl:right-36 right-0">
                 <AccountModal
-                    isAccountModal={isAccountModal}
-                    handleOpenAccount={handleOpenAccount}
+                    isAccountModal={isModalOpen}
+                    handleOpenAccount={toggleModal}
                     userData={loggedUser}
                 />
             </div>
-        </div>
+        </>
     );
 
     const heartIcon = (
-        <div className="">
+        <button
+            className=""
+            onClick={() => handleGoToPage('/favorites')}
+        >
             {!inFav.length ? (
-                <button>
-                    <AiOutlineHeart
-                        onClick={() => hadleGoToPage('/favorites')}
-                        size="30px"
-                        color="white"
-                    />
-                </button>
+                <AiOutlineHeart
+                    size="32px"
+                    color="white"
+                />
             ) : (
-                <button>
-                    <AiFillHeart
-                        onClick={() => hadleGoToPage('/favorites')}
-                        size="30px"
-                        color="white"
-                    />
-                </button>
+                <AiFillHeart
+                    size="32px"
+                    color="white"
+                />
             )}
-        </div>
+        </button>
     );
 
-    const modal = (
+    const modalBG = (
         <div
-            className="absolute bg-black/70 w-screen h-screen z-10 top-[60px] left-0 "
-            onClick={handleOpenAccount}
+            onClick={toggleModal}
+            className=" absolute bg-black/50 w-screen h-screen top-0 left-0 xl:right-0   z-10"
         ></div>
     );
 
     return (
-        <div
-            className={`flex  gap-4 justify-end my-auto z-10 mr-2 ${
-                isAccountModal ? 'mr-2' : 'mr-2'
-            }`}
-        >
-            {searchIcon}
-            {personIcon}
-            {heartIcon}
-            {bag}
-            {isAccountModal && <div>{modal}</div>}
-        </div>
+        <>
+            <div className={`flex  gap-4 justify-end  my-auto z-20 mr-2 `}>
+                {searchIcon}
+                {personIcon}
+                {heartIcon}
+                {bagIcon}
+            </div>
+            {isModalOpen && <>{modalBG}</>}
+        </>
     );
 };
-
-export default IconsComponent;

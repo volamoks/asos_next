@@ -2,19 +2,19 @@ import { IItemPageProps } from '@/components/SingleItemDescription/Interfaces';
 import { FC } from 'react';
 import Details_item from './Detail_Item';
 
-const Details: FC<IItemPageProps> = ({ item }) => {
+const Details: FC<IItemPageProps> = ({ item: { info } }) => {
     const details = (
         <>
             <Details_item
-                info={item?.info?.aboutMe}
+                info={info?.aboutMe}
                 title={'Title'}
             />
             <Details_item
-                info={item?.info?.sizeAndFit}
+                info={info?.sizeAndFit}
                 title={'Size And Fit'}
             />
             <Details_item
-                info={item?.info?.careInfo}
+                info={info?.careInfo}
                 title={'Care Info'}
             />
         </>

@@ -1,8 +1,8 @@
-import Favorite from '@/components/FavoritesComponents/Favorite';
+import { FavoritePage } from '@/components/FavoritesPage/Favorite';
 import React from 'react';
 
-const FavoritesPage = () => {
-    return <Favorite />;
+const favoritesPage = () => {
+    return <FavoritePage />;
 };
 
-export default FavoritesPage;
+export default favoritesPage;

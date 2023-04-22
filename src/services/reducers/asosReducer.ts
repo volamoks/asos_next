@@ -1,4 +1,3 @@
-import { getLocatStorage, setToLocalStorage } from '@/components/Cart/utilities/localStorage';
 import { IItemIncart } from '@/components/UI/AddToCartButton';
 import { IItem } from '@/interfaces/asosInterfaces/item';
 import { Product } from '@/interfaces/asosInterfaces/Items';
@@ -25,21 +24,9 @@ export interface IInitialstate {
     filters: string[];
     loggedUser: ILoggedUser;
     authPage: string;
+    isBgLocked?: boolean;
 }
 
-// const inBaginLS = getLocatStorage(TYPES_REDUCER_ACTIONS.IN_CART);
-// const infavinLS = getLocatStorage(TYPES_REDUCER_ACTIONS.IN_CART);
-// const loggedUser = getLocatStorage(TYPES_REDUCER_ACTIONS.LOGGED_USER);
-// const store =
-//     typeof localStorage !== 'undefined' && getLocatStorage(TYPES_REDUCER_ACTIONS.STORE_GEN);
-
-// const initialState: IInitialstate = {
-//     storeGen: store || 'WOMEN',
-//     inBag: inBaginLS || [],
-//     inFav: infavinLS || [],
-//     filters: [],
-//     loggedUser: loggedUser || { isAuth: false, user: null, id: null },
-// };
 const initialState: IInitialstate = {
     storeGen: 'WOMEN',
     inBag: [],
@@ -47,6 +34,7 @@ const initialState: IInitialstate = {
     filters: [],
     loggedUser: { isAuth: false },
     authPage: 'login',
+    isBgLocked: false,
 };
 
 export const asosSlice = createSlice({
@@ -55,7 +43,6 @@ export const asosSlice = createSlice({
     reducers: {
         setstoreGen: (state, action) => {
             state.storeGen = action.payload;
-            setToLocalStorage(TYPES_REDUCER_ACTIONS.STORE_GEN, action.payload);
         },
         addToBag: (state, action: PayloadAction<IItemIncart>) => {
             const index = state.inBag.findIndex(item => item.id === action.payload.id);
@@ -90,6 +77,9 @@ export const asosSlice = createSlice({
         },
         setAuthPage: (state, action: PayloadAction<string>) => {
             state.authPage = action.payload;
+        },
+        lockBg: (state, action: PayloadAction<boolean>) => {
+            state.isBgLocked = action.payload;
         },
     },
 });

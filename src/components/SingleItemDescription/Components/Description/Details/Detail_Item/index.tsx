@@ -10,10 +10,10 @@ const Details_item: FC<Info> = ({ info, title }) => {
         return <div dangerouslySetInnerHTML={{ __html: url }} />;
     };
 
-    const [isActive, setisActive] = useState(false);
+    const [isActive, setIsActive] = useState(false);
 
     const handleClick = () => {
-        setisActive(!isActive);
+        setIsActive(!isActive);
     };
 
     let about;

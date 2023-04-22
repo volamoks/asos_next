@@ -25,7 +25,7 @@ const MainCardComp: FC<IMainCardProps> = ({ item, isBrandNameShown = true, width
     );
 
     const element = (
-        <button
+        <div
             key={item.id}
             onClick={() => router.push('/items/' + item.link.categoryId)}
         >
@@ -37,7 +37,7 @@ const MainCardComp: FC<IMainCardProps> = ({ item, isBrandNameShown = true, width
                 height={height}
             ></img>
             {title}
-        </button>
+        </div>
     );
     return <>{element}</>;
 };

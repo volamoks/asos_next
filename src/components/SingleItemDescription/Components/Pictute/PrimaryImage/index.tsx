@@ -39,7 +39,9 @@ const PrimaryImg: FC<IPrimaryImgProps> = ({ images, bigImage, setBigImage }) => 
             />
             <div className="absolute z-10 bottom-5 left-40 flex gap-2">
                 {images.map((img, i) => (
-                    <div onClick={() => setImgIndex(i)}
+                    <div
+                        key={img.url}
+                        onClick={() => setImgIndex(i)}
                         className={`h-4 w-4 rounded-full bg-black/50 border-white border ${
                             i === imgIndex ? ' bg-white/80 border-black border' : null
                         }`}

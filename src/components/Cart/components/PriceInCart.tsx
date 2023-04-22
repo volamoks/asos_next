@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { IItemsInCartProps } from '@/components/Cart/interfaces';
 
-const Price: FC<IItemsInCartProps> = ({ item }) => {
+export const PriceInCartCard: FC<IItemsInCartProps> = ({ item }) => {
     const element = !item?.price?.isOutletPrice ? (
         <p className="text-gray-700 font-bold">{item?.price?.current?.text}</p>
     ) : (
@@ -13,7 +13,6 @@ const Price: FC<IItemsInCartProps> = ({ item }) => {
             </span>
         </div>
     );
+
     return <div>{element}</div>;
 };
-
-export default Price;

@@ -4,10 +4,10 @@ import { useRouter } from 'next/router';
 import { useGetItemQuery } from '@/services/api/asosFetchApi';
 
 import ItemPicComponent from './Pictute/ItemPicComponent';
-import Spinner from '../../UI/Spinner';
+import { Spinner } from '../../UI/Spinner';
 import Description from './Description';
 
-const Item: FC = () => {
+export const ItemComponent: FC = () => {
     const router = useRouter();
     const { id } = router.query;
     const { data: singleItem, isLoading } = useGetItemQuery(id);
@@ -26,5 +26,3 @@ const Item: FC = () => {
         </div>
     );
 };
-
-export default Item;
