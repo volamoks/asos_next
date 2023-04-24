@@ -1,7 +1,7 @@
 import { useCreateUserMutation, useGetUsersQuery } from '@/services/api/authApi';
 import { FC, useCallback, useEffect, useState } from 'react';
-import LoginForm from '@/components/Register/LogIn';
-import RegisterForm from '@/components/Register/SignUp';
+import LoginForm from '@/components/Register/components/Login';
+import RegisterForm from '@/components/Register/components/SignUp';
 // import { nanoid } from '@reduxjs/toolkit';
 // import axios from 'axios';
 import GreyButton from '@/components/Register/Ui/GreyButton';

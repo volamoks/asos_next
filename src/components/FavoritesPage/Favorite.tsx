@@ -1,6 +1,6 @@
 import { useAppSelector } from '@/hooks/typedHooks';
 
-import { ItemComponent } from '../ItemsPageComponent/Components/ItemCard/ItemComponent/ItemComponent';
+import { ItemComponent } from '../ItemsPageComponent/Components/ItemComponent';
 import { EmptyPage } from '../EmptyPage/EmptyPage';
 
 export const FavoritePage = () => {

@@ -4,10 +4,10 @@ import Image from 'next/image';
 
 import { Product } from '@/interfaces/asosInterfaces/Items';
 
-import HeartButton from '../../../../UI/HeartButton';
-import PriceComponent from '../../UI/PriceComponent';
-import DiscountLabel from '../../UI/DiscountLabel';
-import SellingFastLabel from '../../UI/SelingFastLabel';
+import HeartButton from '../../UI/HeartButton';
+import PriceComponent from '../UI/PriceComponent';
+import { DiscountLabel } from '../UI/DiscountLabel';
+import SellingFastLabel from '../UI/SelingFastLabel';
 import { IItem } from '@/interfaces/asosInterfaces/item';
 
 interface IItemsProps {
@@ -52,7 +52,7 @@ export const ItemComponent: FC<IItemsProps> = ({ item }) => {
                     sizes="100vw"
                     className="w-full h-auto"
                 />
-                <img
+                <Image
                     className=" w-full h-auto absolute z-1 object-contain  opacity-0 hover:opacity-100 transition duration-300"
                     src={getSecondPic('https://' + item.imageUrl)}
                     alt="secondImage"
@@ -72,9 +72,9 @@ export const ItemComponent: FC<IItemsProps> = ({ item }) => {
             <div className="flex relative max-w-[300px]">
                 {imagesIItem()}
                 {imagesProduct()}
-                <div className=" absolute  top-[20px]">
-                    <DiscountLabel item={item} />
-                </div>
+
+                <DiscountLabel item={item} />
+
                 <div className=" absolute right-[10px]  bottom-[10px] ">
                     <HeartButton item={item} />
                 </div>

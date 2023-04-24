@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import InputForm from '../Ui/InputForm';
-import { IInputProps } from '../SignUp';
+import { IInputProps } from './SignUp';
 
 const LoginInput: FC<IInputProps> = ({ handleInput }) => {
     const inputsData = [
